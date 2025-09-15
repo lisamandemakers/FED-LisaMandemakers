@@ -7,6 +7,25 @@
 
 
 
+/*******************/
+/* --- FONTS ----- */
+/**************** **/
+@font-face {
+  font-family: "Inter-Semibold";
+  src: url("../assets/inter-semibold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: semi-bold;
+}
+
+
+
+@font-face {
+  font-family: "GT-Walsheim-Medium";
+  src: url("../assets/gt-walsheim.woff2") format("woff2");
+  font-weight: 400;
+  font-style: semi-bold;
+}
+
 
 
 
@@ -14,13 +33,27 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  --white: #fff;
+  --black: #000; 
+  --framer-text-color: var( rgba(255, 255, 255, 0.6));
+
+  --framer-link-text-color: #09f;
+
+  --pink-color: #f28fff;
+  --red-color: #ff0000;
+  --aqua-color: #30aadf;
+  --lime-green-color: #baff21;
+  --orange-color: #e28a1d;
+  --purple-color: #5700ff;
+  --blue-color: #0005ff;
+  --orange-light-color: #ffa321;
+  --yellow-green-color: #c2d103;
+  --red-orange-color: #fc552c;
 }
 
-
-
+body {
+	font-family: 'GT-Walsheim-Medium';
+}
 
 
 /****************/
@@ -28,4 +61,3 @@
 /****************/
 
 /* jouw code */
-
