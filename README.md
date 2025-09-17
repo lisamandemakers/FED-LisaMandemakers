@@ -46,9 +46,7 @@ responsive
 
   ### Bevindingen
 
-  Kansen voor verbetering Framer voor de screenreader:
-  Enterprise page: 
-* Hij skipt over de H1, H2, H3, H4 en bodyteksten 
+  #### Kansen voor verbetering Framer voor de screenreader:
 * Hij ziet wel de links maar niet de images of logo’s 
 * Je krijgt bij de text blokken met knoppen “learn more” alleen dat te horen, je weet dus helemaal niet waar dat naar verwijst
 * Bij sommige links leest die de hele https request voor, dit kan best verwarrend zijn 
@@ -56,6 +54,12 @@ responsive
 * Ze maken alleen maar gebruik van divs, classes, ID’s ipv gewone semantics zoals “main” “footer” “header”
 * Sanne gaat letten op de structuur en de koppen en de alt teksten 
 
+#### Wat wel goed is:
+* Consistente opbouw met herbruikbare componenten: De site is duidelijk modulair opgebouwd, waardoor onderdelen visueel en technisch herkenbaar zijn. Dit helpt bij onderhoud en uitbreiding.
+
+* Heldere hiërarchie van contentblokken: Hoewel er weinig semantische tags zijn, is de volgorde van de secties logisch en voorspelbaar. Dit geeft een zekere consistentie.
+
+* Responsiviteit goed uitgewerkt: De site past zich netjes aan verschillende schermgroottes aan. Voor screenreaders is dit indirect gunstig, omdat content op mobiel niet ineens verdwijnt of verkeerd wordt ingeladen.
 </details>
 
 
@@ -85,7 +89,17 @@ responsive
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-Mijn framer website is veranderd sinds gister dus dat is een tegenvaller, maar ik heb wel gewoon nog screenshots dus ik ga die gebruiken alleen kan ik niet alles nachecken.
+Mijn Framer-website is sinds gisteren veranderd, wat een tegenvaller is, maar ik heb gelukkig nog wel screenshots die ik kan gebruiken. Hierdoor kan ik niet alles meer precies nachecken, maar ik wil alsnog bespreken hoe ik mijn code kan vereenvoudigen door minder te nesten en onnodige divs te vermijden, terwijl ik de HTML semantisch correct houd. Ook wil ik de aanpak van de slider op de homepage bekijken, mijn breakdownschets nagaan en controleren of ik divs en classes op de juiste manier heb gebruikt. Daarnaast wil ik de opzet van mijn CSS doornemen om te zorgen dat deze overzichtelijk en logisch is.
+
+#### Werken met Grid
+Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga toepassen, hier heb even een overzicht voor mezelf geschetst zodat ik weet wat voor grid layout ik moet maken:
+
+  <img src="/assets/read-me-img/gridphone.png" width="375px" alt="Grid on homepage">
+    <img src="/assets/read-me-img/grid-drawing.png" width="375px" alt="Grid drawing">
+
+  
+
+  
 
 
   ### Agenda voor meeting
@@ -121,6 +135,8 @@ Mijn framer website is veranderd sinds gister dus dat is een tegenvaller, maar i
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+  
 
 
   ### Agenda voor meeting
