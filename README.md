@@ -91,10 +91,10 @@ responsive
 
   | Robin Yildiz   | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers       |
   | ---            | ---                  | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  | Breakdownschets nakijken  | en dit             | en ik dit    | en dan ik dat    |
+  | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | dit wil ik zeker |
+  | Groenlicht krijgen voor css          | Groenlicht krijgen voor css               | Groenlicht krijgen voor css           | ...              |
+|.. | een erg volle css |..| 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
