@@ -2,8 +2,10 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
+  margin: 0; 
 }
+
 
 
 
@@ -12,18 +14,41 @@
 /**************** **/
 @font-face {
   font-family: "Inter-Semibold";
-  src: url("../assets/inter-semibold.woff2") format("woff2");
+  src: url("../assets/fonts/inter-semibold.woff2") format("woff2");
   font-weight: 400;
   font-style: semi-bold;
 }
 
-
-
 @font-face {
   font-family: "GT-Walsheim-Medium";
-  src: url("../assets/gt-walsheim.woff2") format("woff2");
+  src: url("../assets/fonts/gt-walsheim.woff2") format("woff2");
   font-weight: 400;
-  font-style: semi-bold;
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Medium-Test";
+  src: url("../assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../assets/fonts/inter-medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../assets/fonts/inter-bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Inter-Variabele";
+  src: url("../assets/fonts/inter-variabele.woff2") format("woff2");
+  font-weight: 400;
+  font-style: regular;
 }
 
 
@@ -35,7 +60,7 @@
 :root {
   --white: #fff;
   --black: #000; 
-  --framer-text-color: var( rgba(255, 255, 255, 0.6));
+  --framer-text-color: rgba(255, 255, 255, 0.6);
 
   --framer-link-text-color: #09f;
 
@@ -51,13 +76,38 @@
   --red-orange-color: #fc552c;
 }
 
+/*******************/
+/* --- GENERAL --- */
+/*******************/
+
 body {
-	font-family: 'GT-Walsheim-Medium';
+	font-family: 'GT-Walsheim-Medium-Test';
+	background-color: var(--black);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: var(--white);
+		font-size: 41px
+}
+
+h1 {
+	font-size: 40px;
+	width: fit-content;
+	font-weight:300;
+	letter-spacing: -2px;
+}
+
+p {
+	color: var(--framer-text-color);
+}
+
+img {
+	width: 100vw;
 }
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
