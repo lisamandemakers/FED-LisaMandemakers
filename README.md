@@ -91,10 +91,13 @@ responsive
 
   | Robin Yildiz   | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers       |
   | ---            | ---                  | ---          | ---              |
-  | Breakdownschets nakijken  | en dit             | en ik dit    | en dan ik dat    |
-  | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | dit wil ik zeker |
-  | Groenlicht krijgen voor css          | Groenlicht krijgen voor css               | Groenlicht krijgen voor css           | ...              |
-|.. | een erg volle css |..| 
+  | Breakdownschets nakijken  | en dit             | en ik dit    |  Ik wil minder gaan nesten en onnodige divs gbruiken, hoe pak ik dit aan   |
+  | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | dit wil ik zeker |  Hoe ga ik de slider op de homepage aanpakken?
+  | Groenlicht krijgen voor css          | Groenlicht krijgen voor css               | Groenlicht krijgen voor css           | Breakdownschets nagaan          |
+|.. | | een erg volle css | De divs / classes op sommige plekken, correct gebruikt of niet?| 
+| | | |. |
+| | | |. |
+| | | |. |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
