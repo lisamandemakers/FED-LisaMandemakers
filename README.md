@@ -28,10 +28,12 @@ responsive
 
   #### Screenshot(s) van de eerste pagina (small screen): 
  [De home page](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1)
+ 
   <img src="/assets/read-me-img/Framer-Home-Phone.png"  width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   De Enterprise page
+  
   <img src="/assets/read-me-img/Framer-Enterprise-Phone.png"  width="375px" alt="omschrijving van de pagina">
  
 </details>
@@ -63,13 +65,13 @@ responsive
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="/assets/read-me-img/Framer-Home-Phone.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="/assets/read-me-img/Framer-Home-Phone-1-breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
+  <!-- ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
 
 </details>
 
@@ -83,7 +85,7 @@ responsive
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Mijn framer website is veranderd sinds gister dus dat is een tegenvaller, maar ik heb wel gewoon nog screenshots dus ik ga die gebruiken alleen kan ik niet alles nachecken.
 
 
   ### Agenda voor meeting
