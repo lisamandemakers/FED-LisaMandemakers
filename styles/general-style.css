@@ -1,0 +1,225 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+
+
+/*******************/
+/* --- FONTS ----- */
+/**************** **/
+@font-face {
+  font-family: "Inter-Semibold";
+  src: url("../assets/fonts/inter-semibold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: semi-bold;
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Medium";
+  src: url("../assets/fonts/gt-walsheim.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Medium-Test";
+  src: url("../assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../assets/fonts/inter-medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../assets/fonts/inter-bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Inter-Variabele";
+  src: url("../assets/fonts/inter-variabele.woff2") format("woff2");
+  font-weight: 400;
+  font-style: regular;
+}
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  --white: #fff;
+  --black: #000;
+  --framer-text-color: rgba(255, 255, 255, 0.6);
+
+  --framer-link-text-color: #09f;
+  --border-color: rgba(105, 105, 105, 0.705);
+  --btn-color: rgba(77, 77, 77, 0.561);
+
+  --pink-color: #f28fff;
+  --red-color: #ff0000;
+  --aqua-color: #30aadf;
+  --turqoise-color:#47c5d1;
+  --lime-green-color: #baff21;
+  --orange-color: #e28a1d;
+  --purple-color: #5700ff;
+  --blue-color: #0005ff;
+  --orange-light-color: #ffa321;
+  --yellow-green-color: #c2d103;
+  --red-orange-color: #fc552c;
+}
+
+/*******************/
+/* --- GENERAL --- */
+/*******************/
+
+body {
+  font-family: 'GT-Walsheim-Medium-Test';
+  background-color: #000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
+  
+}
+
+
+h1 {
+  font-size: 41px;
+  width: fit-content;
+  font-weight: 200;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+h3 {
+  font-family: "Inter-Variabele";
+  font-size: 1.5em;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 2em;
+  line-height: 1em;
+  max-width: 300px;
+  text-align: left;
+}
+
+li {
+  text-decoration: none;
+}
+
+p {
+  color: var(--framer-text-color);
+  font-family: "Inter-Variabele";
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 18px;
+  
+}
+
+
+img {
+  width: 100vw;
+}
+
+section a {
+  font-family: "Inter-medium";
+  font-weight: 700;
+  font-size: 0.90em;
+  text-decoration: none;
+}
+
+
+/*******************/
+/* ----- NAV ------ */
+/*******************/
+
+body header {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+  height: 4em;
+  position: fixed;
+  background-color: #00000080;
+  z-index: 99;
+   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px); /* Safari */
+ 
+}
+
+
+
+
+body header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 2em;
+}
+
+body header nav button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 45%;
+  width: 100%;
+}
+
+body header nav button div {
+  height: 2px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 1em;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-decoration: none;
+  height: 100%;
+}
+
+body header a {
+  color: var(--white);
+}
+
+body header a img {
+  width: 30px;
+  height: 100%;
+}

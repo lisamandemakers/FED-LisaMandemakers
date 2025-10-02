@@ -1,0 +1,481 @@
+/***********************************/
+/* ----- HERO SECTION (1) ------ */
+/*********************************/
+
+main>section:first-of-type {
+  padding: 7em 0 3.5em 0;
+  background-color: blueviolet;
+  background-image: url("/assets/images/Framer-hero-bg.avif");
+  background-size: cover;
+  /* vult de hele div */
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+
+main>section:first-of-type div {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+
+main>section:first-of-type a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6em 0.9em;
+  border-radius: 2em;
+  transition: background 0.2s;
+
+}
+
+main>section:first-of-type a:first-of-type {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+main>section:first-of-type a:nth-of-type(2) {
+  background-color: var(--btn-color);
+  color: var(--white);
+}
+
+main>section:first-of-type img {
+  margin-top: 2em;
+}
+
+
+/***********************************/
+/* ----- TICKER SECTION (2) ------ */
+/*********************************/
+/* SOURCE USED: https://www.youtube.com/watch?v=nAjR0Oj0J8E */
+
+main>section:nth-of-type(2) {
+  /* background-color: blueviolet; */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+main>section:nth-of-type(2):before,
+main>section:nth-of-type(2):after {
+  position: absolute;
+  top: 0;
+  width: 16em;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+main>section:nth-of-type(2):before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0)40%, var(--black));
+}
+
+main>section:nth-of-type(2):after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0)40%, var(--black)95%);
+}
+
+main>section:nth-of-type(2) ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: 35s slide infinite linear;
+  gap: 1em
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+main>section svg,
+section:nth-of-type(2) img {
+  height: 1.5em;
+  width: fit-content;
+}
+
+/***********************************/
+/* ----- CAROUSEL SECTION (3) ---- */
+/*********************************/
+
+/***  algemene styling  ***/
+
+@layer basis {
+  main>section:nth-of-type(3) {
+    padding: 1.3em;
+  }
+
+  main>section:nth-of-type(3) h2 {
+    padding: 1em 0;
+    width: 100%;
+    max-width: 10em;
+
+  }
+
+  main>section:nth-of-type(3) ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: "";
+    container-type: inline-size;
+  }
+
+  main>section:nth-of-type(3) li {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/images/carousel-bg.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    gap: 0.5em;
+    padding: 6% 0em 0em 5%;
+    overflow: hidden;
+    border: 1.5px solid var(--border-color);
+  }
+
+  main>section:nth-of-type(3) li h3 {
+    order: 2;
+    /* komt na p */
+    margin: 0;
+  }
+
+  main>section:nth-of-type(3) li p {
+    order: 1;
+    text-align: left;
+    font-size: 0.9em;
+
+  }
+
+  main>section:nth-of-type(3) li a {
+    order: 3;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    padding: 0;
+    color: var(--framer-text-color);
+    font-size: 1.5em;
+  }
+
+  /* Mag je display none, of moet het visibility hidden? */
+  main>section:nth-of-type(3) li a .hidden {
+    display: none;
+  }
+
+
+  main>section:nth-of-type(3) img {
+    order: 4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1.8px solid var(--border-color);
+    border-radius: 15px 0 0 0;
+    translate: 0em 1.4em;
+
+  }
+}
+
+
+/* 1. BASIC SCROLLEN MET FLEXBOX */
+
+main>section:nth-of-type(3) ul {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  gap: 3em;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(149, 125, 139) transparent;
+}
+
+main>section:nth-of-type(3) li {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+/************************/
+/* 2. PREV/NEXT BUTTONS */
+/************************/
+
+main>section:nth-of-type(3) ul::scroll-button(*) {
+  /* styling voor de buttons */
+  width: 2em;
+  aspect-ratio: 1;
+  margin: 1em 0 0;
+  padding: 0;
+  background-color: canvas;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1em;
+  /* om de buttons te positioneren tov de lijst */
+  position: absolute;
+}
+
+main>section:nth-of-type(3) ul::scroll-button(right) {
+  /* eerst wat je ziet / dan wat je hoort */
+  content: '→' / 'Next';
+  /* ruimte van de rechterkant */
+  right: clamp(1.5rem, 5vw, 2rem);
+}
+
+main>section:nth-of-type(3) ul::scroll-button(left) {
+  content: '←' / 'Previous';
+  right: clamp(1rem, 10vw, 5rem);
+}
+
+main>section:nth-of-type(3) ul::scroll-button(*):disabled {
+  opacity: .5;
+}
+
+@media (max-width: 768px) {
+  main>section:nth-of-type(3) ul::scroll-button(*) {
+    visibility: hidden;
+  }
+
+}
+
+/****************/
+/* 3. TEKST BTNS */
+/****************/
+
+main>section:nth-of-type(3) ul {
+  /* geen scrollbar */
+  scrollbar-width: none;
+  /* de wrapper voor de bolletjes aanzetten */
+  scroll-marker-group: after;
+}
+
+main>section:nth-of-type(3) ul::scroll-marker-group {
+  height: 3em;
+  /* beetje witruimte aan de bovenkant en zijkanten */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  column-gap: .7em;
+}
+
+main>section:nth-of-type(3) li::scroll-marker {
+  content: attr(data-label);
+  font-family: "Inter-Variabele";
+  ;
+  border-radius: 1em;
+  font-size: .8em;
+  white-space: nowrap;
+  transition: .25s;
+  text-decoration: none;
+  color: var(--border-color);
+}
+
+main>section:nth-of-type(3) li::scroll-marker:target-current {
+  color: var(--white);
+}
+
+
+/************************/
+/* 4. GE-SNAP-T (BONUS) */
+/************************/
+/************************
+
+/* VRAAG: waarom werkt img wel maar Li niet? */
+@media (width > 56em) {
+  li {
+    flex-basis: min(67%, 48em);
+    container-type: scroll-state;
+    opacity: 1;
+  }
+
+  img {
+    transition: .5s;
+  }
+
+  /* 📌 Niet-gecentreerde items */
+  /* @container not scroll-state(snapped: x) {
+    li {
+      opacity: 0.5;
+    }
+  } */
+
+  /* 📌 Het item dat WEL gecentreerd is */
+  /* @container scroll-state(snapped: x) {
+    li {
+      opacity: 1;
+
+    }
+  } */
+}
+
+/***********************************/
+/* ----- VIDOE SECTION (4) ---- */
+/*********************************/
+
+ main>section:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin-top: 4em;
+ }
+
+ main>section:nth-of-type(4) h2 {
+  text-align: center;
+ }
+
+ main>section:nth-of-type(4) article {
+    display: grid;
+    /* Maak één grid met één cel zodat tekst boven de afbeelding komt */
+    position: relative; /* nodig voor z-indexen */
+    width: 100%;
+    height: 420px;
+}
+
+
+
+main>section:nth-of-type(4) article img {
+    grid-area: 1 / 1 / 2 / 2; /* plaats de afbeelding in de grid */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main>section:nth-of-type(4) article h3,
+article div {
+    grid-area: 1 / 1 / 2 / 2; /* dezelfde gridcel als de afbeelding */
+    z-index: 2; /* boven de afbeelding */
+    justify-self: center; /* horizontaal centreren */
+    align-self: center; /* verticaal centreren */
+    color: white; /* voor contrast */
+    text-align: center;
+}
+
+main>section:nth-of-type(4) article h3 {
+  align-self: end;
+  margin: 30px;
+  order:  2;
+}
+
+main>section:nth-of-type(4) article div {
+ align-self: end;
+}
+
+
+
+
+/***********************************/
+/* ----- GRID SECTION (5) ---- */
+/*********************************/
+
+main>section:nth-of-type(5) {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  justify-content: center;
+  padding: 1.5em;
+  margin-top:4em;
+}
+
+main>section:nth-of-type(5) a {
+   order: 3;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0;
+    color: var(--white);
+    align-self: center;
+    justify-content: center;
+    font-size: 1em;
+    font-family: "Inter-Variabele";
+
+}
+
+
+main>section:nth-of-type(5) ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+  padding: 0;
+}
+
+main>section:nth-of-type(5) li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0.35em;
+}
+
+main>section:nth-of-type(5) li:nth-of-type(1) {
+  grid-column: span 2 / span 2;
+  background-color: var(--turqoise-color);
+
+}
+
+main>section:nth-of-type(5) li:nth-of-type(2) {
+  grid-row: span 2 / span 2;
+  grid-row-start: 2;
+  background-color: var(--red-color);
+
+}
+
+main>section:nth-of-type(5) li:nth-of-type(3) {
+  grid-row-start: 2;
+  background-color: var(--pink-color);
+}
+
+main>section:nth-of-type(5) li:nth-of-type(4) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  background-color: var(--turqoise-color);
+
+}
+
+main>section:nth-of-type(5) li:nth-of-type(5) {
+  grid-column: span 2 / span 2;
+  grid-row-start: 4;
+  background-color: var(--orange-color);
+
+}
+
+main>section:nth-of-type(5) li:nth-of-type(6) {
+  display: none;
+  background-color: var(--aqua-color);
+
+}
+
+main>section:nth-of-type(5) ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* crop edges */
+  /* or use `object-fit: contain;` to show the full image with whitespace */
+  border-radius: 8px;
+  /* optional, just looks nicer */
+  background-color: var(--aqua-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+
+}
