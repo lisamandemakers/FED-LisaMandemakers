@@ -14,12 +14,22 @@
 /*******************/
 /* --- FONTS ----- */
 /**************** **/
+
 @font-face {
-  font-family: "Inter-Semibold";
-  src: url("../assets/fonts/inter-semibold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: semi-bold;
+  font-family: "GT-Walsheim-Light";
+  src: url("../assets/fonts/GT-Walsheim-Light.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: "GT-Walsheim-Thin";
+  src: url("../assets/fonts/GT-Walsheim-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Regular";
+  src: url("../assets/fonts/GT-Walsheim-Light.woff2") format("woff2");
+}
+
 
 @font-face {
   font-family: "GT-Walsheim-Medium";
@@ -27,10 +37,14 @@
   font-weight: 400;
 }
 
+
 @font-face {
-  font-family: "GT-Walsheim-Medium-Test";
-  src: url("../assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.woff2") format("woff2");
+  font-family: "Inter-Variabele";
+  src: url("../assets/fonts/inter-variabele.woff2") format("woff2");
+  font-weight: 400;
+  font-style: regular;
 }
+
 
 @font-face {
   font-family: "Inter-Medium";
@@ -40,18 +54,19 @@
 }
 
 @font-face {
+  font-family: "Inter-Semibold";
+  src: url("../assets/fonts/inter-semibold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: semi-bold;
+}
+
+@font-face {
   font-family: "Inter-Bold";
   src: url("../assets/fonts/inter-bold.woff2") format("woff2");
   font-weight: 400;
   font-style: bold;
 }
 
-@font-face {
-  font-family: "Inter-Variabele";
-  src: url("../assets/fonts/inter-variabele.woff2") format("woff2");
-  font-weight: 400;
-  font-style: regular;
-}
 
 
 
@@ -86,8 +101,10 @@
 /*******************/
 
 body {
-  font-family: 'GT-Walsheim-Medium-Test';
+  font-family: 'GT-Walsheim-Medium';
   background-color: #000;
+    font-feature-settings: "salt";
+
 }
 
 main {
@@ -109,15 +126,14 @@ h6 {
 h1 {
   font-size: 41px;
   width: fit-content;
-  font-weight: 200;
   text-align: center;
   width: 100%;
   max-width: 300px;
+  font-weight: 200;
 }
 
 h3 {
-  font-family: "Inter-Variabele";
-  font-size: 1.5em;
+   font-family: "Inter-Variabele";
 }
 
 h2 {
@@ -126,6 +142,7 @@ h2 {
   line-height: 1em;
   max-width: 300px;
   text-align: left;
+  letter-spacing: -0.6px;
 }
 
 li {
@@ -135,11 +152,6 @@ li {
 p {
   color: var(--framer-text-color);
   font-family: "Inter-Variabele";
-  width: 100%;
-  max-width: 200px;
-  text-align: center;
-  line-height: 1.5em;
-  font-size: 18px;
   
 }
 
@@ -149,8 +161,7 @@ img {
 }
 
 section a {
-  font-family: "Inter-medium";
-  font-weight: 700;
+  font-family: "Inter-Variabele";
   font-size: 0.90em;
   text-decoration: none;
 }
