@@ -119,7 +119,6 @@ main>section:nth-of-type(2) ul {
   margin: 0;
   animation: 35s slide infinite linear;
   gap: 1em;
-  background-color: blueviolet;
 }
 
 main>section:nth-of-type(2) ul li {
@@ -127,7 +126,6 @@ main>section:nth-of-type(2) ul li {
   list-style: none;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
   width: fit-content;
 }
 
