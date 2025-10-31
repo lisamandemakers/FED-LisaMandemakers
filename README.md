@@ -68,15 +68,17 @@ responsive
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
+  ### 1. De home pagina: 
   <img src="/assets/read-me-img/Framer-Home-Phone-1-breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
+  ### 2. De enterprise pagina: 
+  <img src="/assets/read-me-img/Framer-Home-Phone-1-breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
+    
   <!-- ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
-
 </details>
 
 
@@ -95,12 +97,11 @@ Mijn Framer-website is sinds gisteren veranderd, wat een tegenvaller is, maar ik
 Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga toepassen, hier heb even een overzicht voor mezelf geschetst zodat ik weet wat voor grid layout ik moet maken:
 
   <img src="/assets/read-me-img/gridphone.png" width="375px" alt="Grid on homepage">
-    <img src="/assets/read-me-img/grid-drawing.png" width="375px" alt="Grid drawing">
+  <img src="/assets/read-me-img/grid-drawing.png" width="375px" alt="Grid drawing">
 
   
 
   
-
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -117,10 +118,24 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Zorg dat de taal goed klopt
+- Weten hoe je in javascript zonder id en classes kan selecteren ?
+    - Je tikt letterlijk gewoon:  document.queryselector(“header nav button”)
+- Hamburger menu mag in een button
+- Link voor carrousel met css: https://chrome.dev/carousel-configurator/
+    - Werk alleen in Chrome
+
+- Ik moet nog letten op de volgorde van de heading
+- Svg’s zijn goed om te gebruiken
+    - En makkelijk stijlbaar 
+
+- Webarchive.org om oude webversies te kunnen bekijken
+
+- Je kunt met de screenreader alle html elementen checken, lanmarks: voor navigatie
+- Ctrl opt U en met pijltjes links rechts en boven naar beneden om dingen te selecteren
+
+- Je moet a links die telkens het zelfde zijn aanpassen door er onzichtare span zin te zetten en hier de verduidelijkte naam in
+
 
 </details>
 
