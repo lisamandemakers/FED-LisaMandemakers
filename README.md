@@ -160,7 +160,7 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   | Robin Yildiz    | Kaa Leung Ho          | Kaj-Benjamin Sitanala     | Lisa Mandemakers (ik)        |
   | ---            | ---                | ---          | ---              |
   | HTML controleren  | De verbeterde html van de 1e webpagina nakijken             |  HTML controleren  | Hoe pak ik de grid layout aan want er zit een hele kleine schaduw in    |
-  | CSS controleren | Flexbox in de eerste en tweede navigatie controleren | CSS controleren | Waarom werkt een scrollstate wel op <img> en niet op <li>
+  | CSS controleren | Flexbox in de eerste en tweede navigatie controleren | CSS controleren | Waarom werkt een scrollstate wel op `<img>` en niet op `<li>`
   |             | Hero-section controleren                | ...          | ...              | Hoe kan ik mijn ticker, smooth maken
  | ...            | Hamburger menu: css of javascript                | ...          | ...              |Mag je bij onzichtbare tekst: display none doen of visibility hidden?
 
