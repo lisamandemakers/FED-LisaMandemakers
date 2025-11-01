@@ -51,7 +51,7 @@ responsive
 * Je krijgt bij de text blokken met knoppen “learn more” alleen dat te horen, je weet dus helemaal niet waar dat naar verwijst
 * Bij sommige links leest die de hele https request voor, dit kan best verwarrend zijn 
 * Hij slaat een hele sectie over die met alleen teksten 
-* Ze maken alleen maar gebruik van divs, classes, ID’s ipv gewone semantics zoals “main” “footer” “header”
+* Ze maken alleen maar gebruik van divs, classes, I D’s ipv gewone semantics zoals “main” “footer” “header”
 * Sanne gaat letten op de structuur en de koppen en de alt teksten 
 
 #### Wat wel goed is:
@@ -68,15 +68,17 @@ responsive
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
+  ### 1. De home pagina: 
   <img src="/assets/read-me-img/Framer-Home-Phone-1-breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
+  ### 2. De enterprise pagina: 
+  <img src="/assets/read-me-img/Framer-Home-Phone-1-breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
+    
   <!-- ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
-
 </details>
 
 
@@ -95,19 +97,18 @@ Mijn Framer-website is sinds gisteren veranderd, wat een tegenvaller is, maar ik
 Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga toepassen, hier heb even een overzicht voor mezelf geschetst zodat ik weet wat voor grid layout ik moet maken:
 
   <img src="/assets/read-me-img/gridphone.png" width="375px" alt="Grid on homepage">
-    <img src="/assets/read-me-img/grid-drawing.png" width="375px" alt="Grid drawing">
+  <img src="/assets/read-me-img/grid-drawing.png" width="375px" alt="Grid drawing">
 
   
 
   
-
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Robin Yildiz   | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers       |
+  | Robin Yildiz   | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers (ik)       |
   | ---            | ---                  | ---          | ---              |
-  | Breakdownschets nakijken  | Breakdownschets nakijken          | Breakdownschets nakijken    |  Ik wil minder gaan nesten en onnodige divs gbruiken, hoe pak ik dit aan   |
+  | Breakdownschets nakijken | Breakdownschets nakijken          | Breakdownschets nakijken    |  Ik wil minder gaan nesten en onnodige divs gbruiken, hoe pak ik dit aan   |
   | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | Html structuur controleren of het matcht met breakdownschets | Kijken of mijn Html semantisch correct is |  Hoe ga ik de slider op de homepage aanpakken?
   | Groenlicht krijgen voor css          | Groenlicht krijgen voor css               | Groenlicht krijgen voor css           | Breakdownschets nagaan          |
 || | een erg volle css | De divs / classes op sommige plekken, correct gebruikt of niet?| 
@@ -117,10 +118,24 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Zorg dat de taal goed klopt
+- Weten hoe je in javascript zonder id en classes kan selecteren ?
+    - Je tikt letterlijk gewoon:  document.queryselector(“header nav button”)
+- Hamburger menu mag in een button
+- Link voor carrousel met css: https://chrome.dev/carousel-configurator/
+    - Werk alleen in Chrome
+
+- Ik moet nog letten op de volgorde van de heading
+- Svg’s zijn goed om te gebruiken
+    - En makkelijk stijlbaar 
+
+- Webarchive.org om oude webversies te kunnen bekijken
+
+- Je kunt met de screenreader alle html elementen checken, lanmarks: voor navigatie
+- Ctrl opt U en met pijltjes links rechts en boven naar beneden om dingen te selecteren
+
+- Je moet a links die telkens het zelfde zijn aanpassen door er onzichtare span zin te zetten en hier de verduidelijkte naam in
+
 
 </details>
 
@@ -142,11 +157,15 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Robin Yildiz    | Kaa Leung Ho          | Kaj-Benjamin Sitanala     | Lisa Mandemakers (ik)        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | HTML controleren  | De verbeterde html van de 1e webpagina nakijken             |  HTML controleren  | Hoe pak ik de grid layout aan want er zit een hele kleine schaduw in    |
+  | CSS controleren | Flexbox in de eerste en tweede navigatie controleren | CSS controleren | Waarom werkt een scrollstate wel op `<img>` en niet op `<li>`
+  |             | Hero-section controleren                | ...          | ...              | Hoe kan ik mijn ticker, smooth maken |
+ | ...            | Hamburger menu: css of javascript                | ...          | ...              |Mag je bij onzichtbare tekst: display none doen of visibility hidden? | 
+ | ...            | Vraag bij uitklapbare dropdown menu :hover - hoe uitwerken in javascript?                 | Eerste opzet html van de tweede webpagina controleren (met name webshop gedeelte)          | ...              |
+ | ...            | ...                | ...          | ...              |
+ | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -189,7 +208,7 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Robin Yildiz     | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers (ik)        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
