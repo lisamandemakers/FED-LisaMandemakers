@@ -76,12 +76,15 @@
 /*********************/
 :root {
   --white: #fff;
+  --off-white: #ffffffc1;
   --black: #000;
   --framer-text-color: rgba(255, 255, 255, 0.6);
 
   --framer-link-text-color: #09f;
-  --border-color: rgba(105, 105, 105, 0.705);
+  --border-color: rgba(105, 105, 105, 0.12);
   --btn-color: rgba(255, 255, 255, 0.5);
+  --transparent-btn-color: rgba(255, 255, 255, 0.096);
+  --input-color: rgba(255, 255, 255, 0.044);
 
   --pink-color: #f28fff;
   --red-color: #ff0000;
@@ -110,6 +113,11 @@ body {
 main {
   display: flex;
   flex-direction: column;
+}
+
+main>section svg {
+  height: 1.5em;
+
 }
 
 h1,
@@ -155,6 +163,30 @@ p {
 
 }
 
+label {
+  color: var(--framer-text-color);
+  font-family: "Inter-Variabele";
+  font-weight: 100;
+  font-size: 0.8em;
+}
+
+legend {
+  color: var(--white);
+  font-family: "Inter-Variabele";
+  font-weight: 100;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--framer-text-color);
+  font-family: "Inter-Variabele";
+  font-weight: 100;
+  font-size: 0.8em;
+}
+
 
 img {
   width: 100vw;
@@ -164,6 +196,10 @@ a {
   font-family: "Inter-Variabele";
   font-size: 0.90em;
   text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
 
 
