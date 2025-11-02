@@ -501,7 +501,6 @@ Ik heb de carousel slider van de oefeningen uit de les gebruikt, deze carousel w
 main>section:nth-of-type(3) li::scroll-marker {
   content: attr(data-label);
   font-family: "Inter-Variabele";
-  ;
   border-radius: 1em;
   font-size: .8em;
   white-space: nowrap;
