@@ -79,17 +79,19 @@
   --white: #000;
   --black: #fff;
   --nav-color: #ffffffe1;
-  --trans-btn-color: rgba(0, 0, 0, 0.5);
+  --trans-btn-color: #00000080;
+  --always-white-color: #fff;
 
 
-  --framer-text-color: rgb(92, 92, 92);
+  --framer-text-color: #5c5c5c;
   --framer-link-text-color: #09f;
-  --border-color: rgba(105, 105, 105, 0.12);
-  --input-color: rgba(255, 255, 255, 0.044);
+  --border-color: #6969691f;
+  --input-color: #ffffff0b;
 
 
   --pink-color: #f28fff;
   --red-color: #ff0000;
+  --bright-orange-color: #fb3f00;
   --aqua-color: #30aadf;
   --turqoise-color: #47c5d1;
   --lime-green-color: #a3e515;
@@ -99,6 +101,9 @@
   --orange-light-color: #ffa321;
   --yellow-green-color: #c2d103;
   --red-orange-color: #fc552c;
+  --taupe-color: #877350;
+  --green-color: #057c4a;
+  --yellow-color: #ffca1c;
 
 }
 
@@ -198,6 +203,27 @@ textarea::placeholder {
 }
 
 
+/* styling van de slider zelf */
+input[type="range"] {
+  -webkit-appearance: none;
+
+  height: 4px;
+  background: var(--white);
+  border-radius: 2px;
+  outline: none;
+}
+
+/* chrome / safari */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--framer-link-text-color);
+  cursor: pointer;
+}
+
+
 
 
 a {
@@ -208,6 +234,17 @@ a {
 
 .hidden {
   display: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 

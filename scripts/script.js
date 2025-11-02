@@ -96,3 +96,30 @@ setInterval(() => {
   }
 
 }, 2500); // elke 2.5 sec
+
+
+// slider: eerste range
+const slider = document.querySelector('input[type="range"]');
+
+// pak alle p's
+const ps = document.querySelectorAll('p');
+
+// pak alle links
+const links = document.querySelectorAll('a');
+
+// pak alle li items
+const lis = document.querySelectorAll('li');
+
+// functie om font_size toe te passen
+function apply(){
+  const size = slider.value + 'px';
+  ps.forEach(el => el.style.fontSize = size);
+  links.forEach(el => el.style.fontSize = size);
+  lis.forEach(el => el.style.fontSize = size);
+}
+
+// startwaarde
+apply();
+
+// live
+slider.addEventListener('input', apply);

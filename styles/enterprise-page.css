@@ -30,11 +30,16 @@ main>section:first-of-type h1 {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
+    opacity: 0;
+    animation: fadeUp .8s ease-out forwards;
 }
 
 main>section:first-of-type p {
     grid-row: 2 / 3;
     grid-column: 1/3;
+    opacity: 0;
+    animation: fadeUp .8s ease-out forwards;
+    animation-delay: 0.15s;
 }
 
 main>section:first-of-type a {
@@ -49,6 +54,9 @@ main>section:first-of-type a {
     font-weight: 900;
     height: fit-content;
     width: fit-content;
+    opacity: 0;
+    animation: fadeUp .8s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
 main>section:first-of-type a:first-of-type {
@@ -82,6 +90,9 @@ main>section:is(:nth-of-type(2), :nth-of-type(8)) {
         padding: 1.5em 1em;
         border: 0.15em solid var(--border-color);
         border-radius: 0.6em;
+        opacity: 0;
+        animation: fadeUp .8s ease-out forwards;
+        animation-delay: 0.45s;
 
         & p {
             margin-bottom: 2.4em;
@@ -425,6 +436,27 @@ li:has(input:checked) article:nth-of-type(1) svg path {
 
 
 @layer basis {
+
+    main>section:nth-of-type(6) {
+        padding-bottom: 3em;
+        display: flex;
+        flex-direction: column;
+
+        & h4 {
+            align-self: center;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        & p {
+            align-self: center;
+            text-align: center;
+            width: 90%;
+            padding-bottom: 2em;
+        }
+    }
+
+
     main>section:nth-of-type(6) ul {
         margin: 0;
         padding: 0;
@@ -459,10 +491,30 @@ li:has(input:checked) article:nth-of-type(1) svg path {
         align-items: center;
         justify-content: center;
         padding: 0.6em;
-        background-color: violet;
+        background-color: var(--blue-color);
 
         &:nth-of-type(2) {
-            background-color: var(-);
+            background-color: var(--bright-orange-color);
+        }
+
+        &:nth-of-type(3) {
+            background-color: var(--taupe-color);
+        }
+
+        &:nth-of-type(4) {
+            background-color: var(--framer-text-color);
+        }
+
+        &:nth-of-type(5) {
+            background-color: var(--green-color);
+        }
+
+        &:nth-of-type(6) {
+            background-color: var(--orange-light-color);
+        }
+
+        &:nth-of-type(7) {
+            background-color: var(--yellow-color);
         }
     }
 }
@@ -682,7 +734,7 @@ main>article {
     padding: 0em;
     gap: 2em;
     position: relative;
-    margin: 2em 0 15em 0;
+    margin: 10em 0 15em 0;
 
     &::before {
 
