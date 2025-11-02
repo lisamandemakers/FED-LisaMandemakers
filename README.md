@@ -205,6 +205,16 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 
 ### Dingen die ik heb verbererd in de nieuwe site
 - Ik heb overal relevante alt teksten gebruikt, dus elke afbeelding wordt nu goed uitgelegd
+```html
+        <li data-label="Publish">
+					<h3>Build a CMS that fits you and your team</h3>
+					<p>Publishing</p>
+					<a href="">Learn more<span class="hidden">about Publishing</span></a>
+					<img src="assets/images/cms4.jpg" alt="Framer publishing page" />
+				</li>
+```
+
+
 - Ik heb de H1, H2, H3, H4 en bodyteksten goed en sematisch ingezet dus de screenreader heeft nu een stuk gestructureerde koppen schema’s
 - Wanneer er een “learn more” button is, is is er voor de screenreader een span die dat voorleest zodat de gebruiker daadwerkelijk weerwaar het om gaat
 
@@ -225,7 +235,25 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 ```
 
 
-- Links die niet gelinkt zijn hebben een “#” en anders leest ie gewoon netjes de naam voor 
+- Links die niet gelinkt zijn hebben een “#” en anders leest ie gewoon netjes de naam voor
+```html
+      <ul>
+				<li><a href="#">Product</a></li>
+				<li><a href="#">Teams</a></li>
+				<li><a href="#">Resources</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="enterprise.html">Enterprise</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Dashboard </a><button>D</button></li>
+				<li> <input type="range" min="12" max="52" value="15" step="5">
+					<p>Current Fontsize</p>
+				</li>
+			</ul>
+```
+
+
+
 - Alle html tags zijn semantisch gebruikt, amper classes, ID’s en divs gebruikt.
 
 
@@ -286,7 +314,56 @@ Uitkomsten
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+
+  #### De Dashboard Button
+  <img src="assets/read-me-img/dashboard.png" width="375px" alt="Dashboard image">
+  Deze knop is ook beschikbaar om op te klikken met het toetsenbord. dit maakt het nog toegankelijker en is een leuke toevoeging van de site, ik vond het best lastig om deze knop mooi en identiek na te maken maar het is uiteindelijk gelukt en ik ben blij met het resultaat dit is de stijling van de knop:
+
+  ```css
+  body header nav ul li>button {
+  background-image: linear-gradient(45deg, var(--framer-text-color), var(--black));
+  border-radius: 5px;
+  color: var(--always-white-color);
+  border: 1px solid var(--border-color);
+  position: relative;
+     cursor: pointer;
+}
+  ```
+
+  <img src="assets/read-me-img/automatic-carousel.png" width="375px" alt="Dashboard image">
+  Dit was de allermoeilijkste sectie van allemaal, ik had natuurlijk in de homepage ook al een carousel gemaakt met only css, maar deze moest ook nog eens automatisch worden , in een codepen ben ik bezig geweest en chatGPT heeft me een mooie JS functie gegeven diie iik kon toepassen op de carousel. In de codepen werkte alles uitstekend, maar toen ik hem in mijn eigen code wilde implementeren werkte het maar niet. Uiteindelijk ben ik rustig door alle code gegaan en ben ik er uit gekomen wat er mis was. 
+
+  ```html
+      <li data-label="Flower website">
+                    <a href="#">
+                       <img src="assets/images/enterprise-website-example-7.avif"
+                            alt="website that is made with framer" />
+                    </a>
+                </li>
+```
+
+  ```js
+   const ul = document.querySelector('main > section:nth-of-type(6) ul');
+
+/* autoscrollen */
+setInterval(() => {
+  const distance = ul.clientWidth;          // breedte 1 card
+  const max = ul.scrollWidth - ul.clientWidth;
+
+  if (ul.scrollLeft >= max - 5) {
+    // terug naar begin
+    ul.scrollTo({ left: 0, behavior: "smooth" });
+  } else {
+    // 1 card verder
+    ul.scrollBy({ left: distance, behavior: "smooth" });
+  }
+
+}, 2500); // elke 2.5 sec
+
+
+```
+  
+
 
 
   ### Dit ging goed/Heb ik geleerd: 

@@ -328,7 +328,6 @@ body header nav ul li>button {
      cursor: pointer;
 }
 
-/* Het pop-out element met ::after */
 body header nav ul li>button::after {
     content: "Projects";
     position: absolute;
