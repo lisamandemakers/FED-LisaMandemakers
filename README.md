@@ -171,11 +171,10 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
+ - Minimum scherm breedte 375 aanhouden 
+- Mag je margin gebruiken? Ja voor kleine dingen / spacings wel
+- Mijn eigen vragen: hoe kan ik LI items aanspreken.
+- Ik heb besproken met de studentassistent hoe ik de kaarten aan de zeikant wel een lagere opacity kan geven en beter kan maken
 </details>
 
 
@@ -210,9 +209,11 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 
   | Robin Yildiz     | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers (ik)        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | dit bespreken  | en dit             | en ik dit    |  Gaps zijn niet gelijk in grid, mag je in dit geval margins gebruiken? (Sectie 4)    |
+  | Html checken | Ka |Spans juist gebruikt | dit wil ik zeker |
+  | CSS           | Mag een a in een a              | Color scheme volgorde        |  Ik heb alleen een div om een afbeelding gezet die een mask layer heeft (Sectie 8)              |
+    | ...            | ...                | ...          |  Moet de list element nog een p in? (Footer)             |
+      | ...            | ...                | ...          |  Mag een span in een a? (Footer)         |
 
 
   ### Verslag van meeting
