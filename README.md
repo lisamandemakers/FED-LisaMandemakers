@@ -207,6 +207,24 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 - Ik heb overal relevante alt teksten gebruikt, dus elke afbeelding wordt nu goed uitgelegd
 - Ik heb de H1, H2, H3, H4 en bodyteksten goed en sematisch ingezet dus de screenreader heeft nu een stuk gestructureerde koppen schema’s
 - Wanneer er een “learn more” button is, is is er voor de screenreader een span die dat voorleest zodat de gebruiker daadwerkelijk weerwaar het om gaat
+
+```html
+		<li data-label="Design">
+					<h3>Build a CMS that fits you and your team.</h3>
+					<p>Content Manager</p>
+					<a href="#" class="link">
+						Read more <span class="hidden">about how to buid a cms</span>
+						<svg width="7px" height="10px" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<path d="M6 6 L12 12 L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</a>
+					<img src="assets/images/framer-cms.png" alt="framer cms" />
+				</li>
+        ```
+
+
 - Links die niet gelinkt zijn hebben een “#” en anders leest ie gewoon netjes de naam voor 
 - Alle html tags zijn semantisch gebruikt, amper classes, ID’s en divs gebruikt.
 
