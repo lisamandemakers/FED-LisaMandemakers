@@ -29,7 +29,7 @@ Voor fed kies ik toch in eerste instantie surface plane, hier een lijst van ding
 
 ## Je website
 
-<details open>
+<details>
   <summary>Website informatie</summary>
 
   ### Je opdracht:
