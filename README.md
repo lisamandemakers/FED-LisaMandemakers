@@ -558,8 +558,13 @@ main>section:nth-of-type(3) li::scroll-marker {
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. 
-  2. bron 2
-  3. ...
+  1. [Framer Website](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
+  2. [Carousel codepen - DLO](https://codepen.io/shooft/pen/QwjQGZe).
+  3. [Nav Codepen - DLO](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
+  3. [Grid Codepen - Sanne](https://codepen.io/shooft/pen/jEWygoo).
+  3. [Info cards Codepen - Chris Donker](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
+  6. [Ticker YT Tut](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
+  7. [Timer checkbox](ChatGPT).
+  8. [Grid generator](https://cssgrid-generator.netlify.app/).
 
 </details>
