@@ -261,7 +261,7 @@ main>section:nth-of-type(5) {
             overflow: hidden;
             border-radius: 12px;
 
-            --card-position: translateY(100%);
+            --card-position: translateY(110%);
             --h3-position: translate(10px);
             --card-opacity: 1;
             --h3-opacity: 0;
@@ -302,12 +302,12 @@ main>section:nth-of-type(5) {
                 transform: var(--position-icon);
                 scale: var(--scale-icon);
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            
+
             }
 
             & label svg path {
                 fill: var(--svg-color);
-                  z-index: 99; 
+                z-index: 99;
             }
 
             & label p {
@@ -360,7 +360,7 @@ main>section:nth-of-type(5) {
             & article:nth-of-type(2) a {
                 color: grey;
                 text-decoration: none;
-                font-size: 0.75em;
+                font-size: 0.6em;
                 font-weight: 500;
                 display: inline-flex;
                 align-items: center;
@@ -373,9 +373,9 @@ main>section:nth-of-type(5) {
 
 }
 
-li:has(input:checked) article:nth-of-type(1) p{
+li:has(input:checked) article:nth-of-type(1) p {
     /* --card-opacity: 0; */
-      --p-opacity: 0;
+    --p-opacity: 0;
 }
 
 li:has(input:checked) article:nth-of-type(2) {
@@ -394,11 +394,11 @@ li:has(input:checked) article:nth-of-type(2) a {
 
 li:has(input:checked) article:nth-of-type(1) svg {
     --position-icon: translate(-8em, -6em);
-     --scale-icon: 0.6;
+    --scale-icon: 0.6;
 }
 
-li:has(input:checked) article:nth-of-type(1) svg path{
-      --svg-color: var(--black);
+li:has(input:checked) article:nth-of-type(1) svg path {
+    --svg-color: var(--black);
 }
 
 
@@ -407,7 +407,85 @@ li:has(input:checked) article:nth-of-type(1) svg path{
 /***********************************/
 /* ----- CAROUSEL SECTION (6) ------ */
 /*********************************/
-/* main>section:nth-of-type(6) {} */
+main>section:nth-of-type(6) {
+    padding: 7em 1em 0em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &:before, 
+    &:after {
+           position: absolute;
+    top: 0;
+    width: 16em;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    }
+
+    & h2 {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 0.9em;
+        text-align: center;
+        line-height: 150%;
+    }
+
+    & p {
+        text-align: center;
+        width: 65%;
+    }
+
+    & ul:nth-of-type(2) {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        animation: 35s slide infinite linear;
+        gap: 1em;
+    }
+
+    & ul li {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+    }
+
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+main>section:nth-of-type(6):before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0)40%, var(--black));
+}
+
+main>section:nth-of-type(6):after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0)40%, var(--black)95%);
+}
+
+
+
 
 /***********************************/
 /* ----- REVIEWS SECTION (7) ------ */
