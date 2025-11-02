@@ -241,6 +241,7 @@ a {
     opacity: 0;
     transform: translateY(25px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -291,15 +292,26 @@ body header nav ul {
 }
 
 
-body header nav ul li:not(:last-child) a {
+body header nav ul li a {
   /* stijlen hier */
   color: var(--framer-text-color);
   font-family: "Inter-Variabele";
   font-weight: 100;
   font-size: 1em;
+  
 }
 
+body header nav ul li:nth-of-type(8) {
+  display: flex;
+  gap: 0.6em;
+  margin-bottom: 2em;
+}
 
+body header nav ul li:nth-of-type(8) a { 
+  color: white;
+  font-weight: 700;
+
+}
 
 nav.toonMenu {
   /* JOUW CODE HIER - stap 4 */
@@ -310,7 +322,39 @@ nav.toonMenu {
 
 
 
-body header button {
+body header nav ul li>button {
+  background-image: linear-gradient(45deg, var(--framer-text-color), var(--black));
+  border-radius: 5px;
+  color: var(--always-white-color);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Het pop-out element met ::after */
+body header nav ul li>button::after {
+    content: "Projects";
+    position: absolute;
+    right: 1em;
+    top: 100%; /* direct onder de button */
+    margin-top: 5px;
+    padding: 1em 2em;
+    background-color: var(--border-color);
+    white-space: nowrap;
+    border-radius: 0.6em;
+    
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; /* zodat het niet klikbaar is */
+}
+
+button[data-active="true"]::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+body header>button:first-of-type {
   width: 2.5em;
   height: 100%;
   display: flex;
@@ -326,7 +370,7 @@ body header button {
   /* draai rond het midden */
 }
 
-body header button div {
+body header>button:first-of-type div {
   height: 2px;
   width: 2em;
   background-color: var(--white);

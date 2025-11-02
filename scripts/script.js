@@ -123,3 +123,26 @@ apply();
 
 // live
 slider.addEventListener('input', apply);
+
+
+
+// Selecteer het laatste button in de nav (de D-button)
+const navList = document.querySelector("nav ul");
+const popButton = navList.querySelector("button:last-of-type");
+
+// Functie om toggle te doen
+function togglePopout() {
+    const isActive = popButton.getAttribute("data-active") === "true";
+    popButton.setAttribute("data-active", !isActive);
+}
+
+// Klik-event
+popButton.addEventListener("click", togglePopout);
+
+// Keydown-event voor 'd'
+document.addEventListener("keydown", (e) => {
+    // Check of de ingedrukte toets 'd' of 'D' is
+    if (e.key === "d" || e.key === "D") {
+        togglePopout();
+    }
+});
