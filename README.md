@@ -561,10 +561,12 @@ main>section:nth-of-type(3) li::scroll-marker {
   1. [Framer Website](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
   2. [Carousel codepen - DLO](https://codepen.io/shooft/pen/QwjQGZe).
   3. [Nav Codepen - DLO](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
-  3. [Grid Codepen - Sanne](https://codepen.io/shooft/pen/jEWygoo).
-  3. [Info cards Codepen - Chris Donker](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
+  4. [Grid Codepen - Sanne](https://codepen.io/shooft/pen/jEWygoo).
+  5. [Info cards Codepen - Chris Donker](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
   6. [Ticker YT Tut](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
-  7. [Timer checkbox](ChatGPT).
+  7. [Timer checkbox -ChatGPT ](ChatGPT).
   8. [Grid generator](https://cssgrid-generator.netlify.app/).
+  9. [CSS nesting - MDN ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting).
+  9. [:has  - css tricks](https://css-tricks.com/the-css-has-selector/).
 
 </details>
