@@ -317,6 +317,7 @@ Uitkomsten
 
   #### De Dashboard Button
   <img src="assets/read-me-img/dashboard.png" width="375px" alt="Dashboard image">
+
   Deze knop is ook beschikbaar om op te klikken met het toetsenbord. dit maakt het nog toegankelijker en is een leuke toevoeging van de site, ik vond het best lastig om deze knop mooi en identiek na te maken maar het is uiteindelijk gelukt en ik ben blij met het resultaat dit is de stijling van de knop:
 
   ```css
@@ -330,16 +331,18 @@ Uitkomsten
 }
   ```
 
+  #### Automatic looping carousel
   <img src="assets/read-me-img/automatic-carousel.png" width="375px" alt="Dashboard image">
+
   Dit was de allermoeilijkste sectie van allemaal, ik had natuurlijk in de homepage ook al een carousel gemaakt met only css, maar deze moest ook nog eens automatisch worden , in een codepen ben ik bezig geweest en chatGPT heeft me een mooie JS functie gegeven diie iik kon toepassen op de carousel. In de codepen werkte alles uitstekend, maar toen ik hem in mijn eigen code wilde implementeren werkte het maar niet. Uiteindelijk ben ik rustig door alle code gegaan en ben ik er uit gekomen wat er mis was. 
 
   ```html
       <li data-label="Flower website">
-                    <a href="#">
-                       <img src="assets/images/enterprise-website-example-7.avif"
-                            alt="website that is made with framer" />
-                    </a>
-                </li>
+            <a href="#">
+                <img src="assets/images/enterprise-website-example-7.avif"
+                  alt="website that is made with framer" />
+            </a>
+      </li>
 ```
 
   ```js
@@ -369,7 +372,40 @@ setInterval(() => {
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  #### `display: grid`
+  <img src="assets/read-me-img/grid.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/gri-2.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-3.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-4.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-5.png" width="375px" alt="Grid example">
+
+  Ik gebruikte hiervoor eigenlijk zelden grid, maar tijdens dit vak heb ik het heel vaak moeten gebruiken. Eerst was ik een beetje sceptisch want ik gebruikte eigenlijk altijd `flexbox` in combinatie met veel divs. Maar na het een paar keer te gebruiken heb ik gemerkt dat het voor sommige dingen echt gunstiger is dan flexbox en het bespaard je een hoop divs en classes. Ik ben heel blij dat ik nu ook `display:grid` onder de knie heb, dat was een doel van mij.
+
+
+  ```css
+main>section:nth-of-type(4) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr max-content max-content 2em;
+  gap: 0.2em;
+  margin-top: 5em;
+
+}
+
+main>section:nth-of-type(4) h2 {
+  grid-column: span 2;
+  justify-self: center;
+  text-align: center;
+  padding-bottom: 1em;
+}
+  ```
+
+#### `:has` {
+i
+}
+
+
+
 
 
   ### Dit was lastig/Is niet gelukt:
