@@ -13,7 +13,16 @@ Lisa Mandemakers
 Rood
 
   #### Je focus:
-responsive
+
+Voor fed kies ik toch in eerste instantie surface plane, hier een lijst van dingen die ik overwoog om toe te passen en de gene met checkjes zijn daadwerklijk gebruikt in de site!
+- Lettergrootte kunnen instellen ✅
+- Prefers reduced motion
+- Animaties toevoegen ✅
+- Meerdere complete microinteracties ✅
+- Svg icons stijlen en animeren ✅
+- DOM Manipulatie  ✅
+- Has() ✅
+- Interactie met toetsenbord ✅
  
 </details>
 
@@ -186,8 +195,21 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
-  ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+### Dit waren de punten die verbeterd konden worden
+- Hij skipt over de H1, H2, H3, H4 en bodyteksten 
+- Hij ziet wel de links maar niet de images of logo’s 
+- Je krijgt bij de text blokken met knoppen “learn more” alleen dat te horen, je weet dus helemaal niet waar dat naar verwijst
+- Bij sommige links leest die de hele https request voor, dit kan best verwarrend zijn 
+- Hij slaat een hele sectie over die met alleen teksten 
+- Ze maken alleen maar gebruik van divs, classes, ID’s ipv gewone semantics zoals “main” “footer” “header”
+
+### Dingen die ik heb verbererd in de nieuwe site
+- Ik heb overal relevante alt teksten gebruikt, dus elke afbeelding wordt nu goed uitgelegd
+- Ik heb de H1, H2, H3, H4 en bodyteksten goed en sematisch ingezet dus de screenreader heeft nu een stuk gestructureerde koppen schema’s
+- Wanneer er een “learn more” button is, is is er voor de screenreader een span die dat voorleest zodat de gebruiker daadwerkelijk weerwaar het om gaat
+- Links die niet gelinkt zijn hebben een “#” en anders leest ie gewoon netjes de naam voor 
+- Alle html tags zijn semantisch gebruikt, amper classes, ID’s en divs gebruikt.
+
 
 </details>
 
@@ -217,10 +239,22 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  
+Andere mensen uit mijn groepje
+- Wat moet er in een label? > een for attribute
+- Waarom werkt de screenreader niet? > omdat hij die niet heeft gedownload
+- Select custom una > website voor custom select 
+- Bij de root  colors verander je de light and dark mode
+    - Je stopt de root gewoon in de media (prefers-color-scheme: dark) direct onder de root
+
+
+Uitkomsten
+- Definieert grid-template-areas met text:
+- Mask mag om een div heen, want kan helaas nog niet op images
+- en je mag een `p` in een `li` doen maar alleen als nodig is.
+
+
+
 
 </details>
 
