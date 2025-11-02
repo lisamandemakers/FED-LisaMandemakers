@@ -331,6 +331,32 @@ Uitkomsten
 }
   ```
 
+  #### Letter Grootte Slider
+   <img src="assets/read-me-img/letter-slide.png" width="375px" alt="letterslide image">
+
+  Ik heb de website nog toegankelijker gemaakt door een letter slider toe te voegen.
+
+  ```css
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 0.2em;
+  background: var(--white);
+  border-radius: 2px;
+  outline: none;
+}
+
+/* chrome / safari */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  background: var(--framer-link-text-color);
+  cursor: pointer;
+}
+
+  ```
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -463,9 +489,59 @@ setInterval(() => {
 
 }, 2500); // elke 2.5 sec
 
-
 ```
-  
+
+
+  #### Carousel
+   <img src="assets/read-me-img/carousel.png" width="375px" alt="letterslide image">
+
+Ik heb de carousel slider van de oefeningen uit de les gebruikt, deze carousel was een beetje anders want ipv bolletjes had deze tekst, maar met een after of die elementen kon ik dat heel makkelijk aanpassen, omdat elk `li` item een eigen unieke `data-label` heeft.
+
+  ```css
+main>section:nth-of-type(3) li::scroll-marker {
+  content: attr(data-label);
+  font-family: "Inter-Variabele";
+  ;
+  border-radius: 1em;
+  font-size: .8em;
+  white-space: nowrap;
+  transition: .25s;
+  text-decoration: none;
+  color: var(--framer-text-color);
+}
+  ```
+
+
+    #### Forms
+
+    ```html
+    <form action="">
+                <svg xmlns="http://www.w3.org/2000/svg" display="block" role="presentation" viewBox="0 0 20 20">
+                    <path
+                        d="M 0.642 16.241 C 0.262 16.353 -0.091 16 0.021 15.621 L 1.172 11.708 C 0.591 10.6 0.262 9.338 0.262 8 C 0.262 3.582 3.844 0 8.262 0 C 12.681 0 16.262 3.582 16.262 8 C 16.262 12.418 12.681 16 8.262 16 C 6.924 16 5.663 15.671 4.554 15.091 Z"
+                        fill="var(--19qepfv, var(--token-26e3cb56-8447-4a64-9b7d-37f16a9909d4, rgb(255, 255, 255)))"
+                        height="16.26231827687469px" id="YF58gxeKl" transform="translate(1.738 2)"
+                        width="16.262318164110184px" />
+                </svg>
+                <fieldset>
+                    <legend>Talk to sales</legend>
+                    <p>Let's help your team build better.</p>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="First and last name">
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Work email">
+
+                    <label for="company">Company</label>
+                    <input id="company" type="text" placeholder="Company">
+
+                    <label for="help">How can we help?</label>
+                    <textarea name="help" id="help" placeholder="Tell us about your enterprise needs"></textarea>
+
+                    <input type="submit" value="Get in touch" id="submit">
+                </fieldset>
+            </form>
+    ```
 
 </details>
 
