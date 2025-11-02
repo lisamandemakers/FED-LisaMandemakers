@@ -41,12 +41,13 @@ main>section:first-of-type a:first-of-type {
 }
 
 main>section:first-of-type a:nth-of-type(2) {
-  background-color: var(--btn-color);
+  background-color: var(--trans-btn-color);
   color: var(--white);
 }
 
 main>section:first-of-type img {
   margin-top: 2em;
+  width: 100vw;
 }
 
 main>section:first-of-type p {
@@ -72,6 +73,14 @@ main>section:first-of-type p {
   }
 
 }
+
+  @media (prefers-color-scheme: dark) {
+ main>section:first-of-type {
+ background-color: var(--black);
+ background-image: none;
+}
+  }
+
 
 
 /***********************************/
@@ -200,6 +209,7 @@ main>section:nth-of-type(2) ul {
     order: 2;
     font-size: 1.2em;
     max-width: 13em;
+    color: var(--black);
   }
 
   main>section:nth-of-type(3) li p {
@@ -249,7 +259,7 @@ main>section:nth-of-type(3) ul {
   overscroll-behavior-x: contain;
   gap: 3em;
   scrollbar-width: thin;
-  scrollbar-color: rgb(149, 125, 139) transparent;
+  scrollbar-color: var(--framer-text-color);
 }
 
 main>section:nth-of-type(3) li {
@@ -332,7 +342,7 @@ main>section:nth-of-type(3) li::scroll-marker {
   white-space: nowrap;
   transition: .25s;
   text-decoration: none;
-  color: var(--border-color);
+  color: var(--framer-text-color);
 }
 
 main>section:nth-of-type(3) li::scroll-marker:target-current {
@@ -403,7 +413,7 @@ main>section:nth-of-type(4) h3 {
   max-width: 8em;
   text-align: center;
   font-size: 1.5em;
-  color: white;
+  color: var(--black);
 
 }
 
@@ -457,8 +467,8 @@ main>section:nth-of-type(4) a:nth-of-type(2) {
 
   justify-self: start;
 
-  background-color: var(--btn-color);
-  color: var(--white);
+  background-color: var(--trans-btn-color);
+  color: var(--black);
   margin-left: 0.3em;
 }
 
@@ -799,7 +809,7 @@ main>section:nth-of-type(6) ul:nth-of-type(2) li a:first-of-type img {
 
 
 main>section:nth-of-type(6) ul:nth-of-type(2) li a:nth-of-type(2) {
-  color: white;
+  color:var(--white);
   height: 0.9em;
   align-self: end;
 

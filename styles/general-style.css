@@ -75,16 +75,18 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-  --white: #fff;
-  --off-white: #ffffffc1;
-  --black: #000;
-  --framer-text-color: rgba(255, 255, 255, 0.6);
 
+  --white: #000;
+  --black: #fff;
+  --nav-color: #ffffffe1;
+  --trans-btn-color: rgba(0, 0, 0, 0.5);
+
+
+  --framer-text-color: rgb(92, 92, 92);
   --framer-link-text-color: #09f;
   --border-color: rgba(105, 105, 105, 0.12);
-  --btn-color: rgba(255, 255, 255, 0.5);
-  --transparent-btn-color: rgba(255, 255, 255, 0.096);
   --input-color: rgba(255, 255, 255, 0.044);
+
 
   --pink-color: #f28fff;
   --red-color: #ff0000;
@@ -97,7 +99,19 @@
   --orange-light-color: #ffa321;
   --yellow-green-color: #c2d103;
   --red-orange-color: #fc552c;
+
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #fff;
+    --black: #000;
+    --nav-color: #000000e1;
+    --trans-btn-color: rgba(255, 255, 255, 0.096);
+  }
+}
+
+
 
 /*******************/
 /* --- GENERAL --- */
@@ -105,15 +119,11 @@
 
 body {
   font-family: 'GT-Walsheim-Medium';
-  background-color: #000;
+  background-color: var(--black);
   font-feature-settings: "salt";
 
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
 
 main>section svg {
   height: 1.5em;
@@ -122,7 +132,7 @@ main>section svg {
 
 h1,
 h2,
-h3,
+
 h4,
 h5,
 h6 {
@@ -188,9 +198,7 @@ textarea::placeholder {
 }
 
 
-img {
-  width: 100vw;
-}
+
 
 a {
   font-family: "Inter-Variabele";
@@ -209,15 +217,15 @@ a {
 
 body header {
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5em;
-  position:sticky;
-  top:0;
+  position: sticky;
+  top: 0;
   z-index: 30;
-  background-color: #000000e1;
-    /* backdrop-filter: blur(5px); */
+  background-color: var(--nav-color);
+  /* backdrop-filter: blur(5px); */
 
 }
 
@@ -225,13 +233,15 @@ body header {
 
 body header nav {
   position: fixed;
-  top:0;
-  right:0;
-  left:0;
-  bottom:0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-color: var(--black);
+  transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.1s ease, opacity 0.3s ease; /* transform + fade */
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  /* transform + fade */
   padding: 5em 1.5em
 }
 
@@ -246,7 +256,7 @@ body header nav ul {
 
 body header nav ul li:not(:last-child) a {
   /* stijlen hier */
-   color: var(--framer-text-color);
+  color: var(--framer-text-color);
   font-family: "Inter-Variabele";
   font-weight: 100;
   font-size: 1em;
@@ -256,15 +266,15 @@ body header nav ul li:not(:last-child) a {
 
 nav.toonMenu {
   /* JOUW CODE HIER - stap 4 */
-
- opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 
 }
 
 
 
 body header button {
-  width:2.5em;
+  width: 2.5em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -273,9 +283,10 @@ body header button {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 21; 
+  z-index: 21;
   gap: 0.6em;
-  transform-origin: center; /* draai rond het midden */
+  transform-origin: center;
+  /* draai rond het midden */
 }
 
 body header button div {
@@ -283,7 +294,8 @@ body header button div {
   width: 2em;
   background-color: var(--white);
   border-radius: 1em;
-  transition: transform 0.3s ease; /* animatie */
+  transition: transform 0.3s ease;
+  /* animatie */
 }
 
 
@@ -306,12 +318,16 @@ footer>a {
   color: var(--white);
 }
 
-body header a img,
-footer a img {
+body header a svg,
+footer a svg {
   width: 30px;
   height: 100%;
 }
 
+body header a svg path,
+footer a svg path {
+  fill: var(--white);
+}
 
 
 

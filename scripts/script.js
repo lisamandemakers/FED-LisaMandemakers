@@ -1,3 +1,8 @@
+/***********************************/
+/* ----- INFO CARDS LOOP --------- */
+/*********************************/
+
+
 document.addEventListener("DOMContentLoaded", () => {
     // Select all <li> elements
     const cards = document.getElementsByTagName('li');
@@ -21,11 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/****************************************/
-/* menu openen en sluiten met de button */
-/****************************************/
+/***********************************/
+/* ----- OPEN NAV MENU --------- */
+/*********************************/
 
-/* JOUW CODE HIER - stap 5 */
 
 // stap 1: zoek de menu-button op en sla die op in een variabele
 var deButton = document.querySelector("header button");
@@ -42,9 +46,6 @@ function toggleMenu() {
   // toggle
   deNav.classList.toggle("toonMenu");
 }
-
-
-
 
 
 const button = document.querySelector('header button');
@@ -72,3 +73,26 @@ button.addEventListener('click', () => {
     menuOpen = false;
   }
 });
+
+
+/***********************************/
+/* ----- LOOPING CAROUSEL ---- */
+/*********************************/
+
+/* pak de ul in de 6e section */
+const ul = document.querySelector('main > section:nth-of-type(6) ul');
+
+/* autoscrollen */
+setInterval(() => {
+  const distance = ul.clientWidth;          // breedte 1 card
+  const max = ul.scrollWidth - ul.clientWidth;
+
+  if (ul.scrollLeft >= max - 5) {
+    // terug naar begin
+    ul.scrollTo({ left: 0, behavior: "smooth" });
+  } else {
+    // 1 card verder
+    ul.scrollBy({ left: distance, behavior: "smooth" });
+  }
+
+}, 2500); // elke 2.5 sec

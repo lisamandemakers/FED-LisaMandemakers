@@ -1,7 +1,3 @@
-/***********************************/
-/* ----- CTA SECTION (1) ------ */
-/*********************************/
-
 main p {
     font-size: 0.9em;
 }
@@ -11,6 +7,10 @@ ul {
     padding: 0;
     list-style-type: "";
 }
+
+/***********************************/
+/* ----- CTA SECTION (1) ------ */
+/*********************************/
 
 main>section:first-of-type {
     padding: 7em 0 3em 1em;
@@ -173,6 +173,10 @@ main>section:nth-of-type(3) ul li:nth-of-type(3)>svg {
     width: 8em;
 }
 
+main>section:nth-of-type(3) ul li svg path {
+    fill: var(--white);
+}
+
 main>section:nth-of-type(3) ul li:last-of-type {
     max-width: 10em
 }
@@ -246,7 +250,18 @@ main>section:nth-of-type(4) {
 
 main>section:nth-of-type(5) {
     /* background-color: #0066cc; */
-    padding: 1em;
+    padding: 1em 1em 7em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+
+    & h2 {
+        text-align: center;
+        align-self: center;
+        font-size: 1.5em;
+        width: 75%;
+    }
 
     & ul {
         list-style: none;
@@ -337,7 +352,7 @@ main>section:nth-of-type(5) {
 
 
             & article:nth-of-type(2) {
-                background: #ffffff;
+                background: var(--white);
                 padding: 1em;
                 display: flex;
                 flex-direction: column;
@@ -403,167 +418,172 @@ li:has(input:checked) article:nth-of-type(1) svg path {
 
 
 
+/***********************************/
+/* ----- AUTOMATIC CAROUSEL (6) ---- */
+/*********************************/
 
-main > section:nth-of-type(6){
-    background-color: rgb(183, 54, 54);
-}
+
 
 @layer basis {
-main > section:nth-of-type(6) ul {
-    margin:0;
-    padding:0;
-    list-style-type:"";
-  }
+    main>section:nth-of-type(6) ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: "";
+    }
+
+    main>section:nth-of-type(6) a {
+        width: 100%;
+        height: 100%;
+    }
+
+    main>section:nth-of-type(6) img {
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+        object-fit: cover;
+        border-radius: 0.3em;
+    }
+
+    /* als de li niet ge-snapt-is de img veranderen */
 
 
-main > section:nth-of-type(6) img {
-    transition:.5s;
-    object-fit: cover;
-    border-radius: 0.3em;
-  }
-   /* als de li niet ge-snapt-is de img veranderen */
- 
-
-  main > section:nth-of-type(6) img:hover {
-    opacity: 0.3;
-  }
+    main>section:nth-of-type(6) img:hover {
+        opacity: 0.3;
+    }
 
 
-  main > section:nth-of-type(6) li {
-    background-color: violet;
-  /* padding:0.8em; */
-  border-radius: 0.6em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    flex-basis:min(67%, 48em);
-    flex-basis: 100%;
-  }
+    main>section:nth-of-type(6) li {
+        aspect-ratio: 1 / 1;
+        border-radius: 0.6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6em;
+        background-color: violet;
+
+        &:nth-of-type(2) {
+            background-color: var(-);
+        }
+    }
 }
 
 
-/*********************************/
+
 /* 1. BASIC SCROLLEN MET FLEXBOX */
-/*********************************/
 
-main > section:nth-of-type(6) ul {
-  display:flex;
-  overflow:auto;
-  scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;
-  /* zodat je niet per ongeluk 'back' scrollt */
-  overscroll-behavior-x:contain;
-  
-  gap:4em;
+
+main>section:nth-of-type(6) ul {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* zodat je niet per ongeluk 'back' scrollt */
+    overscroll-behavior-x: contain;
+
+    gap: 1em;
 
 
 }
 
 
-main > section:nth-of-type(6) ul li {
-    flex-shrink:0;
-       flex-basis:100%;
-  scroll-snap-align:center;
+main>section:nth-of-type(6) ul li {
+    flex-shrink: 0;
+    flex-basis: min(67%, 48em);
+    scroll-snap-align: center;
 }
 
 
 
 
-
-/************************/
 /* 2. PREV/NEXT BUTTONS */
-/************************/
 
-main > section:nth-of-type(6) ul::scroll-button(*) {
-  /* styling voor de buttons */
-  width:3em;
-  aspect-ratio:1;
-  margin:1em 0 0;
-  padding:0;
+main>section:nth-of-type(6) ul::scroll-button(*) {
+    /* styling voor de buttons */
+    width: 2em;
+    aspect-ratio: 1;
+    margin: 1em 0 0;
+    padding: 0;
 
-  background-color:canvas;
-  border:none;
-  border-radius:50%;
-  cursor:pointer;
+    background-color: canvas;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
 
-  font-size:1em;
-  position: absolute;
-transform: translateY(-15em);
-  
+    font-size: 1em;
+    position: absolute;
+    transform: translateY(-10em);
+
 
 }
 
-main > section:nth-of-type(6) ul::scroll-button(right) {
-  /* eerst wat je ziet / dan wat je hoort */
-  content: '→' / 'Next';
-  /* ruimte van de rechterkant */
-  right:clamp(1.5rem, 5vw, 2rem);
+main>section:nth-of-type(6) ul::scroll-button(right) {
+    /* eerst wat je ziet / dan wat je hoort */
+    content: '→' / 'Next';
+    /* ruimte van de rechterkant */
+    right: clamp(1.5rem, 5vw, 2rem);
 }
 
-main > section:nth-of-type(6) ul::scroll-button(left) {
-  content: '←' / 'Previous';
-  left:clamp(1.5rem, 5vw, 2rem);
-}
-  
-main > section:nth-of-type(6) ul::scroll-button(*):disabled {
-  opacity:.5;
+main>section:nth-of-type(6) ul::scroll-button(left) {
+    content: '←' / 'Previous';
+    left: clamp(1.5rem, 5vw, 2rem);
 }
 
-main > section:nth-of-type(6) ul::scroll-button(*) {
-  opacity:1;
-  pointer-events:none;
-  transition:.3s;
+main>section:nth-of-type(6) ul::scroll-button(*):disabled {
+    opacity: .5;
+}
+
+main>section:nth-of-type(6) ul::scroll-button(*) {
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
 }
 
 /* als je over de karousel gaat → zichtbaar */
-main > section:nth-of-type(6) ul:hover::scroll-button(*) {
-  opacity:1;
-  pointer-events:auto;
+main>section:nth-of-type(6) ul:hover::scroll-button(*) {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 
 
 
-/****************/
 /* 3. BOLLETJES */
-/****************/
 
 @media (width > 30em) {
-main > section:nth-of-type(6)  ul {
-    /* geen scrollbar */
-    scrollbar-width:none;
-    
-    /* de wrapper voor de bolletjes aanzetten */
-    scroll-marker-group: after;
-  }
+    main>section:nth-of-type(6) ul {
+        /* geen scrollbar */
+        scrollbar-width: none;
+
+        /* de wrapper voor de bolletjes aanzetten */
+        scroll-marker-group: after;
+    }
 }
 
 
-/************************/
+
 /* 4. GE-SNAP-T (BONUS) */
-/************************/
 
 /* developer.chrome.com/blog/css-scroll-state-queries#snapped */
 
-  li {
+li {
     /* de li's zijn 67% van de ul breed maar niet breder dan 48em */
-    flex-basis:min(67%, 48em);
- 
+    flex-basis: min(67%, 48em);
+
     /* om te tracken of de li ge-snapt-is */
     container-type: scroll-state;
-  }
-  
-  /* als de li ge-snapt-is de h2 veranderen */
-  main > section:nth-of-type(6) h2 {
-    transition:.5s;
-    
+}
+
+/* als de li ge-snapt-is de h2 veranderen */
+main>section:nth-of-type(6) h2 {
+    transition: .5s;
+
     @container scroll-state(snapped: x) {
-      background-color:#f09c;
-      color:#fff;
+        background-color: #f09c;
+        color: #fff;
     }
-  }
-  
- 
+}
+
+
 
 
 
@@ -580,7 +600,7 @@ main>section:nth-of-type(7) {
     align-items: center;
     position: relative;
     overflow: hidden;
-     padding: 1.3em;
+    padding: 1.3em;
 
     /* &:before,
     &:after {
@@ -745,7 +765,7 @@ main>article {
         & p:nth-of-type(2) {
             grid-row: 2/3;
             grid-column: 1/7;
-            color: var(--btn-color);
+            color: var(--framer-text-color);
             font-size: 0.8em;
             margin-bottom: 1em;
         }
@@ -755,7 +775,7 @@ main>article {
             grid-column: 1/7;
             margin-bottom: 1em;
             font-size: 0.8em;
-            color: var(--off-white);
+            color: var(--white);
         }
 
         & img {
@@ -834,6 +854,10 @@ main>section:nth-of-type(9) {
                 order: 1;
                 margin-bottom: 1em;
                 width: 1.2em;
+
+                & path {
+                    fill: var(--white);
+                }
             }
 
 
