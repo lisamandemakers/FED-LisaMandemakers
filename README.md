@@ -209,7 +209,7 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 
   | Robin Yildiz     | Kaa Leung Ho         | Kaj-Benjamin Sitanala    | Lisa Mandemakers (ik)        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    |  Gaps zijn niet gelijk in grid, mag je in dit geval margins gebruiken? (Sectie 4)    |
+  | Check up  | CSS controle          | Overal checkup    |  Gaps zijn niet gelijk in grid, mag je in dit geval margins gebruiken? (Sectie 4)    |
   | Html checken | Ka |Spans juist gebruikt | dit wil ik zeker |
   | CSS           | Mag een a in een a              | Color scheme volgorde        |  Ik heb alleen een div om een afbeelding gezet die een mask layer heeft (Sectie 8)              |
     | ...            | ...                | ...          |  Moet de list element nog een p in? (Footer)             |
