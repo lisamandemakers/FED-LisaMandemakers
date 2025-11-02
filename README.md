@@ -331,6 +331,106 @@ Uitkomsten
 }
   ```
 
+
+
+  ### Dit ging goed/Heb ik geleerd: 
+  Korte omschrijving met plaatjes
+
+  #### `display: grid`
+  <img src="assets/read-me-img/grid.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-2.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-3.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-4.png" width="375px" alt="Grid example">
+  <img src="assets/read-me-img/grid-5.png" width="375px" alt="Grid example">
+
+  Ik gebruikte hiervoor eigenlijk zelden grid, maar tijdens dit vak heb ik het heel vaak moeten gebruiken. Eerst was ik een beetje sceptisch want ik gebruikte eigenlijk altijd `flexbox` in combinatie met veel divs. Maar na het een paar keer te gebruiken heb ik gemerkt dat het voor sommige dingen echt gunstiger is dan flexbox en het bespaard je een hoop divs en classes. Ik ben heel blij dat ik nu ook `display:grid` onder de knie heb, dat was een doel van mij. Ik heb ook de hele footer kunnen maken met grid.
+
+
+  ```css
+main>section:nth-of-type(4) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr max-content max-content 2em;
+  gap: 0.2em;
+  margin-top: 5em;
+
+}
+
+main>section:nth-of-type(4) h2 {
+  grid-column: span 2;
+  justify-self: center;
+  text-align: center;
+  padding-bottom: 1em;
+}
+  ```
+
+#### `:has` 
+  <img src="assets/read-me-img/info-cards.png" width="375px" alt="Grid example">
+
+  Ik had eerst deze info cards gemaakt, met een javascript functie en een button waarmee je interactie kon krijgen met de kaart. Maar voor die JS functies had ik classes nodig. Ik wist nog van de minor dat dit ook zonder classes kan en ik dit kon oplossen met `:has`. Het heeft me veel tijd gekost, maar ik ben er uiteindelijik uitgekomen. Ik heb de properties die variabel waren in een variabele gezet en wanneer de checkbox aangevinkt wordt veranderd deze variabele. Hiermee kon ik de hele kaart met css only animeren! Het enige waar ik JS nog voor heb gebruikt is voor de timer die op de kaarten zit, want na 20 sec gaat de kaart weer naar default modus.
+
+  ```css
+  li {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 0.8em;
+
+            --card-position: translateY(110%);
+            --h3-position: translate(0.7em);
+            --card-opacity: 1;
+            --h3-opacity: 0;
+            --link-opacity: 0;
+            --p-opacity: 1;
+            --link-position: translateY(0.7em);
+            --position-icon: translate(0);
+            --scale-icon: 1;
+            --svg-color: var(--white);
+  }
+  ```
+
+```css
+
+li:has(input:checked) article:nth-of-type(1) p {
+    /* --card-opacity: 0; */
+    --p-opacity: 0;
+}
+
+li:has(input:checked) article:nth-of-type(2) {
+    --card-position: translateY(0);
+}
+
+li:has(input:checked) article:nth-of-type(2) h3 {
+    --h3-position: translateY(0);
+    --h3-opacity: 1;
+}
+
+li:has(input:checked) article:nth-of-type(2) a {
+    --link-opacity: 1;
+    --link-position: translateY(0);
+}
+
+li:has(input:checked) article:nth-of-type(1) svg {
+    --position-icon: translate(-8em, -6em);
+    --scale-icon: 0.6;
+}
+
+li:has(input:checked) article:nth-of-type(1) svg path {
+    --svg-color: var(--black);
+}
+
+```
+
+
+
+
+
+
+
+  ### Dit was lastig/Is niet gelukt:
+  Korte omschrijving met plaatjes
+
+
   #### Automatic looping carousel
   <img src="assets/read-me-img/automatic-carousel.png" width="375px" alt="Dashboard image">
 
@@ -367,51 +467,6 @@ setInterval(() => {
 ```
   
 
-
-
-  ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
-  #### `display: grid`
-  <img src="assets/read-me-img/grid.png" width="375px" alt="Grid example">
-  <img src="assets/read-me-img/gri-2.png" width="375px" alt="Grid example">
-  <img src="assets/read-me-img/grid-3.png" width="375px" alt="Grid example">
-  <img src="assets/read-me-img/grid-4.png" width="375px" alt="Grid example">
-  <img src="assets/read-me-img/grid-5.png" width="375px" alt="Grid example">
-
-  Ik gebruikte hiervoor eigenlijk zelden grid, maar tijdens dit vak heb ik het heel vaak moeten gebruiken. Eerst was ik een beetje sceptisch want ik gebruikte eigenlijk altijd `flexbox` in combinatie met veel divs. Maar na het een paar keer te gebruiken heb ik gemerkt dat het voor sommige dingen echt gunstiger is dan flexbox en het bespaard je een hoop divs en classes. Ik ben heel blij dat ik nu ook `display:grid` onder de knie heb, dat was een doel van mij.
-
-
-  ```css
-main>section:nth-of-type(4) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: max-content 1fr max-content max-content 2em;
-  gap: 0.2em;
-  margin-top: 5em;
-
-}
-
-main>section:nth-of-type(4) h2 {
-  grid-column: span 2;
-  justify-self: center;
-  text-align: center;
-  padding-bottom: 1em;
-}
-  ```
-
-#### `:has` {
-i
-}
-
-
-
-
-
-  ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
