@@ -222,7 +222,7 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 					</a>
 					<img src="assets/images/framer-cms.png" alt="framer cms" />
 				</li>
-        ```
+```
 
 
 - Links die niet gelinkt zijn hebben een “#” en anders leest ie gewoon netjes de naam voor 
