@@ -491,6 +491,8 @@ setInterval(() => {
 
 ```
 
+#### Filter Blur
+als ik filter blur wilde toepassen dan lukte dat niet met het openklappende menuy
 
   #### Carousel
    <img src="assets/read-me-img/carousel.png" width="375px" alt="letterslide image">
