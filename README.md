@@ -509,7 +509,8 @@ main>section:nth-of-type(3) li::scroll-marker {
   text-decoration: none;
   color: var(--framer-text-color);
 }
-  ```
+
+```
 
 
     #### Forms
@@ -558,7 +559,7 @@ main>section:nth-of-type(3) li::scroll-marker {
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
+  1. 
   2. bron 2
   3. ...
 
