@@ -13,7 +13,7 @@ ul {
 /*********************************/
 
 main>section:first-of-type {
-    padding: 7em 0 3em 1em;
+    padding: 3em 0 3em 1em;
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-rows: repeat(3, max-content);
@@ -130,7 +130,7 @@ main>section:is(:nth-of-type(2), :nth-of-type(8)) {
     }
 
     & textarea {
-        min-height: 140px;
+        min-height: 10em;
         resize: vertical;
     }
 
@@ -279,21 +279,21 @@ main>section:nth-of-type(5) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.6em;
-        max-width: 1200px;
+
 
         & li {
             position: relative;
             aspect-ratio: 1 / 1;
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 0.8em;
 
             --card-position: translateY(110%);
-            --h3-position: translate(10px);
+            --h3-position: translate(0.7em);
             --card-opacity: 1;
             --h3-opacity: 0;
             --link-opacity: 0;
             --p-opacity: 1;
-            --link-position: translateY(10px);
+            --link-position: translateY(0.7em);
             --position-icon: translate(0);
             --scale-icon: 1;
             --svg-color: var(--white);
@@ -347,7 +347,7 @@ main>section:nth-of-type(5) {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                border-radius: 12px;
+                border-radius: 0.7em;
                 overflow: hidden;
             }
 
@@ -409,7 +409,7 @@ li:has(input:checked) article:nth-of-type(2) {
 }
 
 li:has(input:checked) article:nth-of-type(2) h3 {
-    --h3-position: translateY(0px);
+    --h3-position: translateY(0);
     --h3-opacity: 1;
 }
 

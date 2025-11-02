@@ -58,10 +58,10 @@ main>section:first-of-type img {
 
 main>section:first-of-type p {
   width: 100%;
-  max-width: 200px;
+  max-width: 15em;
   text-align: center;
   line-height: 1.5em;
-  font-size: 18px;
+  font-size: 1em;
     animation: fadeUp .8s ease-out forwards;
     animation-delay: .15s;
       opacity: 0;
@@ -73,23 +73,7 @@ h1 {
 }
 
 
-/* media query voor desktop */
-@media (min-width: 1200px) {
-
-   main>section:first-of-type h1 {
-    font-size: 5em;
-    max-width: 8em;
-    line-height: 90%;
-    letter-spacing: -0.05em;
-  }
-
-  main>section:first-of-type img {
-    width: 75%;
-  }
-
-}
-
-  @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
  main>section:first-of-type {
  background-color: var(--black);
  background-image: none;
@@ -165,24 +149,6 @@ main>section:nth-of-type(2) ul li {
 
 
 
-
-/* media query voor desktop */
-@media (min-width: 810px) {
-
-main>section:nth-of-type(2) ul:nth-of-type(2) {
-  display: none;
-}
-
-main>section:nth-of-type(2) ul {
-  animation: none;
-  flex-wrap: wrap;
-}
-
-
-
-
-}
-
 /***********************************/
 /* ----- CAROUSEL SECTION (3) ---- */
 /*********************************/
@@ -213,7 +179,7 @@ main>section:nth-of-type(2) ul {
     flex-direction: column;
     background-image: url("/assets/images/carousel-bg.jpg");
     background-size: cover;
-    border-radius: 15px;
+    border-radius: 0.7em;
     gap: 0.5em;
     padding: 6% 0em 0em 5%;
     overflow: hidden;
@@ -257,7 +223,7 @@ main>section:nth-of-type(2) ul {
     height: 100%;
     object-fit: cover;
     border: 1.8px solid var(--border-color);
-    border-radius: 15px 0 0 0;
+    border-radius: 0.6em 0 0 0;
     translate: 0em 1.4em;
 
   }
@@ -561,7 +527,7 @@ main>section:nth-of-type(5) li {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 0.6em;
   padding: 0.35em;
 }
 
@@ -607,13 +573,9 @@ main>section:nth-of-type(5) ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* crop edges */
-  /* or use `object-fit: contain;` to show the full image with whitespace */
-  border-radius: 8px;
-  /* optional, just looks nicer */
+  border-radius: 0.6em;
   background-color: var(--aqua-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-
 }
 
 
@@ -642,7 +604,7 @@ main>section:nth-of-type(6) ul:first-of-type {
 
 main>section:nth-of-type(6) ul:first-of-type>li {
   padding: 0.7em 0 0 0.7em;
-  border-radius: 10px;
+  border-radius: 0.6em;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 2.5fr 1fr;
@@ -802,8 +764,8 @@ main>section:nth-of-type(6) ul:nth-of-type(2)>li {
   display: grid;
   grid-template-columns: max-content max-content;
   grid-template-rows: 1fr 1fr;
-  row-gap: 5px;
-  column-gap: 10px;
+  row-gap: 0.3em;
+  column-gap: 0.6em;
   padding: 0;
 
 }
@@ -822,7 +784,7 @@ main>section:nth-of-type(6) ul:nth-of-type(2) li a:first-of-type img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0.6em;
 }
 
 

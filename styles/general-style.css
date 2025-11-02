@@ -147,11 +147,11 @@ h6 {
 
 
 h1 {
-  font-size: 41px;
+  font-size: 2.3em;
   width: fit-content;
   text-align: center;
   width: 100%;
-  max-width: 300px;
+  max-width: 20em;
   font-weight: 200;
 }
 
@@ -163,7 +163,7 @@ h2 {
   font-weight: 200;
   font-size: 2em;
   line-height: 1em;
-  max-width: 300px;
+  max-width: 20em;
   text-align: left;
   letter-spacing: -0.6px;
 }
@@ -206,8 +206,7 @@ textarea::placeholder {
 /* styling van de slider zelf */
 input[type="range"] {
   -webkit-appearance: none;
-
-  height: 4px;
+  height: 0.2em;
   background: var(--white);
   border-radius: 2px;
   outline: none;
@@ -216,8 +215,8 @@ input[type="range"] {
 /* chrome / safari */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 1.1em;
+  height: 1.1em;
   border-radius: 50%;
   background: var(--framer-link-text-color);
   cursor: pointer;
@@ -239,7 +238,7 @@ a {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(1.8em);
   }
 
   to {
@@ -263,8 +262,6 @@ body header {
   top: 0;
   z-index: 30;
   background-color: var(--nav-color);
-  /* backdrop-filter: blur(5px); */
-
 }
 
 
@@ -336,15 +333,15 @@ body header nav ul li>button::after {
     content: "Projects";
     position: absolute;
     right: 1em;
-    top: 100%; /* direct onder de button */
-    margin-top: 5px;
+    top: 100%; 
+    margin-top: 0.4em;
     padding: 1em 2em;
     background-color: var(--border-color);
     white-space: nowrap;
     border-radius: 0.6em;
     color: var(--white);
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-0.8em);
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none; /* zodat het niet klikbaar is */
 }
@@ -402,7 +399,7 @@ footer>a {
 
 body header a svg,
 footer a svg {
-  width: 30px;
+  width: 2em;
   height: 100%;
 }
 
