@@ -3,8 +3,7 @@
 /*********************************/
 
 main>section:first-of-type {
-  padding: 7em 0 3.5em 0;
-  background-color: blueviolet;
+  padding: 5em 0 3.5em 0;
   background-image: url("/assets/images/Framer-hero-bg.avif");
   background-size: cover;
   /* vult de hele div */

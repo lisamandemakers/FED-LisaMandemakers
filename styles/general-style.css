@@ -208,52 +208,86 @@ a {
 /*******************/
 
 body header {
-  width: 100vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1em;
-  align-items: center;
-  height: 4em;
-  position: fixed;
-  background-color: #00000080;
-  z-index: 99;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(8px);
-  /* Safari */
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 1.5em;
+  position:sticky;
+  top:0;
+  z-index: 30;
+  background-color: #000000e1;
+    /* backdrop-filter: blur(5px); */
 
 }
-
 
 
 
 body header nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 2em;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background-color: var(--black);
+  opacity: 0;
+  transition: transform 0.1s ease, opacity 0.3s ease; /* transform + fade */
+  padding: 5em 1.5em
 }
 
-body header nav button {
+body header nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2em;
+}
+
+
+body header nav ul li:not(:last-child) a {
+  /* stijlen hier */
+   color: var(--framer-text-color);
+  font-family: "Inter-Variabele";
+  font-weight: 100;
+  font-size: 1em;
+}
+
+
+
+nav.toonMenu {
+  /* JOUW CODE HIER - stap 4 */
+
+ opacity: 1;
+
+}
+
+
+
+body header button {
+  width:2.5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  height: 45%;
-  width: 100%;
+  z-index: 21; 
+  gap: 0.6em;
+  transform-origin: center; /* draai rond het midden */
 }
 
-body header nav button div {
+body header button div {
   height: 2px;
-  width: 100%;
+  width: 2em;
   background-color: var(--white);
   border-radius: 1em;
+  transition: transform 0.3s ease; /* animatie */
 }
+
+
+
 
 header a,
 footer>a {
@@ -264,6 +298,7 @@ footer>a {
   height: 100%;
   font-family: Inter;
   font-weight: 600;
+  z-index: 21;
 }
 
 body header a,
@@ -276,6 +311,8 @@ footer a img {
   width: 30px;
   height: 100%;
 }
+
+
 
 
 

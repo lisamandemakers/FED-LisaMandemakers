@@ -1,0 +1,172 @@
+main > section:nth-of-type(6){
+    background-color: black;
+}
+
+@layer basis {
+
+main > section:nth-of-type(6) ul {
+    margin:0;
+    padding:0;
+    list-style-type:"";
+  }
+
+
+main > section:nth-of-type(6) img {
+    width:100%;
+    height: 100%;
+    transition:.5s;
+    object-fit: cover;
+    border-radius: 0.3em;
+  }
+   /* als de li niet ge-snapt-is de img veranderen */
+ 
+
+  main > section:nth-of-type(6) img:hover {
+    opacity: 0.3;
+  }
+
+
+  main > section:nth-of-type(6) li {
+    background-color: violet;
+  padding:0.8em;
+  border-radius: 0.6em;
+  }
+}
+
+
+/*********************************/
+/* 1. BASIC SCROLLEN MET FLEXBOX */
+/*********************************/
+
+main > section:nth-of-type(6) ul {
+  display:flex;
+  overflow:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  /* zodat je niet per ongeluk 'back' scrollt */
+  overscroll-behavior-x:contain;
+  
+  gap:1em;
+
+}
+
+
+main > section:nth-of-type(6) ul li {
+  /* flex-basis:100%; */
+  flex-shrink:0;
+  scroll-snap-align:center;
+}
+
+
+
+
+
+/************************/
+/* 2. PREV/NEXT BUTTONS */
+/************************/
+
+main > section:nth-of-type(6) ul::scroll-button(*) {
+  /* styling voor de buttons */
+  width:3em;
+  aspect-ratio:1;
+  margin:1em 0 0;
+  padding:0;
+
+  background-color:canvas;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+z-index: 18;
+  font-size:1em;
+  
+  /* om de buttons te positioneren tov de lijst */
+  position:absolute;
+  top:18em;
+}
+
+main > section:nth-of-type(6) ul::scroll-button(right) {
+  /* eerst wat je ziet / dan wat je hoort */
+  content: '→' / 'Next';
+  /* ruimte van de rechterkant */
+  right:clamp(1.5rem, 5vw, 2rem);
+}
+
+main > section:nth-of-type(6) ul::scroll-button(left) {
+  content: '←' / 'Previous';
+  left:clamp(1.5rem, 5vw, 2rem);
+}
+  
+main > section:nth-of-type(6) ul::scroll-button(*):disabled {
+  opacity:.5;
+}
+
+main > section:nth-of-type(6) ul::scroll-button(*) {
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+}
+
+/* als je over de karousel gaat → zichtbaar */
+main > section:nth-of-type(6) ul:hover::scroll-button(*) {
+  opacity:1;
+  pointer-events:auto;
+}
+
+
+
+
+/****************/
+/* 3. BOLLETJES */
+/****************/
+
+@media (width > 30em) {
+main > section:nth-of-type(6)  ul {
+    /* geen scrollbar */
+    scrollbar-width:none;
+    
+    /* de wrapper voor de bolletjes aanzetten */
+    scroll-marker-group: after;
+  }
+}
+
+
+/************************/
+/* 4. GE-SNAP-T (BONUS) */
+/************************/
+
+/* developer.chrome.com/blog/css-scroll-state-queries#snapped */
+
+
+  main > section:nth-of-type(6) li {
+    /* de li's zijn 67% van de ul breed maar niet breder dan 48em */
+    flex-basis:min(67%, 48em);
+ 
+    /* om te tracken of de li ge-snapt-is */
+    container-type: scroll-state;
+  }
+  
+  /* als de li ge-snapt-is de h2 veranderen */
+  main > section:nth-of-type(6) h2 {
+    transition:.5s;
+    
+    @container scroll-state(snapped: x) {
+      background-color:#f09c;
+      color:#fff;
+    }
+  }
+  
+ 
+
+
+
+
+
+
+/**************************/
+/**************************/
+/***                    ***/
+/***  algemene styling  ***/
+/***                    ***/
+/**************************/
+/**************************/
+
