@@ -308,7 +308,7 @@ body header nav ul li:nth-of-type(8) {
 }
 
 body header nav ul li:nth-of-type(8) a { 
-  color: white;
+  color:var(--white);
   font-weight: 700;
 
 }
@@ -328,6 +328,7 @@ body header nav ul li>button {
   color: var(--always-white-color);
   border: 1px solid var(--border-color);
   position: relative;
+     cursor: pointer;
 }
 
 /* Het pop-out element met ::after */
@@ -341,7 +342,7 @@ body header nav ul li>button::after {
     background-color: var(--border-color);
     white-space: nowrap;
     border-radius: 0.6em;
-    
+    color: var(--white);
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -444,8 +445,8 @@ footer ul:nth-of-type(5) {
 
 footer ul:nth-of-type(8),
 footer ul:nth-of-type(9) {
-  background-color: #30aadf;
   display: flex;
+  gap: 0.4em;
   grid-column: 1/3;
   justify-self: center;
 }
@@ -455,6 +456,15 @@ footer ul li {
   color: var(--white);
   margin-bottom: 1em;
   font-size: 1em;
+}
+
+footer ul li svg {
+  height: 1.3em;
+  
+}
+
+footer ul li svg path {
+  fill: var(--framer-text-color);
 }
 
 footer ul li a {
