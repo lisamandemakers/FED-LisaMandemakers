@@ -157,10 +157,57 @@ Deze week gingen we aan de slag met grid, wat ik zeker ook in mijn website ga to
 <details>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
+ 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik ben al lekker op weg met de home pagina, ik heb een mooie carousel kunnen neerzetten en ben blij met de vormgeving, uit het vorige gesprek heb ik kunnen halen dat `svg` elementen heel goed zijn voor de laadtijd van een website en dat ze goed te animeren en stijlen zijn. Dus daar ben ik tevreden mee aangezien ik zelf best was `svg` elementen heb. Verder ben ik beter geworden ik het gebruik van grid. Ik heb nu nauwlijks de grid generator nodig. Ook ben ik aan de slag gegaan met de root en de dark en light mode. Mijn website is van zichzelf natuurlijk al in dark mode, dus moest ik er voor zorgen dan in light mode de meeste kleuren omdraaien. 
 
-  
+  <img src="/assets/read-me-img/light-1.png" width="375px" alt="Light mode example">
+  <img src="/assets/read-me-img/light-2.png" width="375px" alt="Light mode on home page">
+
+```css
+:root {
+
+  --white: #000;
+  --black: #fff;
+  --nav-color: #ffffffe1;
+  --trans-btn-color: #00000080;
+  --always-white-color: #fff;
+
+
+  --framer-text-color: #5c5c5c;
+  --framer-link-text-color: #09f;
+  --border-color: #6969691f;
+  --input-color: #ffffff0b;
+
+
+  --pink-color: #f28fff;
+  --red-color: #ff0000;
+  --bright-orange-color: #fb3f00;
+  --aqua-color: #30aadf;
+  --turqoise-color: #47c5d1;
+  --lime-green-color: #a3e515;
+  --orange-color: #f78c09;
+  --purple-color: #5700ff;
+  --blue-color: #0005ff;
+  --orange-light-color: #ffa321;
+  --yellow-green-color: #c2d103;
+  --red-orange-color: #fc552c;
+  --taupe-color: #877350;
+  --green-color: #057c4a;
+  --yellow-color: #ffca1c;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #fff;
+    --black: #000;
+    --nav-color: #000000e1;
+    --trans-btn-color: rgba(255, 255, 255, 0.096);
+  }
+}
+```
+
 
 
   ### Agenda voor meeting
@@ -564,7 +611,7 @@ main>section:nth-of-type(3) li::scroll-marker {
   2. [Carousel codepen - DLO](https://codepen.io/shooft/pen/QwjQGZe).
   3. [Nav Codepen - DLO](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
   4. [Grid Codepen - Sanne](https://codepen.io/shooft/pen/jEWygoo).
-  5. [Info cards Codepen - Chris Donker](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
+  5. [Info cards Codepen - Chris Donker](https://codepen.io/Chris-Donker-the-solid/pen/wBMYKQb).
   6. [Ticker YT Tut](https://www.framer.com/?via=quy-vu-manh&dub_id=lDEqkcLfbW2z5nyH&gad_source=1).
   7. [Timer checkbox -ChatGPT ](ChatGPT).
   8. [Grid generator](https://cssgrid-generator.netlify.app/).
