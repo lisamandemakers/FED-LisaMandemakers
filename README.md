@@ -316,8 +316,92 @@ Ik ben al lekker op weg met de home pagina, ik heb een mooie carousel kunnen nee
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Tijdens de laatste weken heb ik voornamelijk gewerkt aan de enterprise page, hier op staan twee formulieren, dus daar heb ik me weer even in verdiept. 
 
+  <img src="/assets/read-me-img/form.png" width="375px" alt="Light mode on home page">
+
+```html
+<form action="">
+                <svg xmlns="http://www.w3.org/2000/svg" display="block" role="presentation" viewBox="0 0 20 20">
+                    <path
+                        d="M 0.642 16.241 C 0.262 16.353 -0.091 16 0.021 15.621 L 1.172 11.708 C 0.591 10.6 0.262 9.338 0.262 8 C 0.262 3.582 3.844 0 8.262 0 C 12.681 0 16.262 3.582 16.262 8 C 16.262 12.418 12.681 16 8.262 16 C 6.924 16 5.663 15.671 4.554 15.091 Z"
+                        fill="var(--19qepfv, var(--token-26e3cb56-8447-4a64-9b7d-37f16a9909d4, rgb(255, 255, 255)))"
+                        height="16.26231827687469px" id="YF58gxeKl" transform="translate(1.738 2)"
+                        width="16.262318164110184px" />
+                </svg>
+                <fieldset>
+                    <legend>Talk to sales</legend>
+                    <p>Let's help your team build better.</p>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="First and last name">
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Work email">
+
+                    <label for="company">Company</label>
+                    <input id="company" type="text" placeholder="Company">
+
+                    <label for="help">How can we help?</label>
+                    <textarea name="help" id="help" placeholder="Tell us about your enterprise needs"></textarea>
+
+                    <input type="submit" value="Get in touch" id="submit">
+                </fieldset>
+            </form>
+```
+
+
+Ook stond er op deze pagina een automatische carousel, deze vond ik heel lastig om werkend te krijgen maar uiteindleijk is het me gelukt
+
+```js
+/* pak de ul in de 6e section */
+const ul = document.querySelector('main > section:nth-of-type(6) ul');
+
+/* autoscrollen */
+setInterval(() => {
+  const distance = ul.clientWidth;          // breedte 1 card
+  const max = ul.scrollWidth - ul.clientWidth;
+
+  if (ul.scrollLeft >= max - 5) {
+    // terug naar begin
+    ul.scrollTo({ left: 0, behavior: "smooth" });
+  } else {
+    // 1 card verder
+    ul.scrollBy({ left: distance, behavior: "smooth" });
+  }
+
+}, 2500); // elke 2.5 sec
+
+```
+
+  <img src="/assets/read-me-img/automatic-carousel.png" width="375px" alt="Light mode on home page">
+
+
+Ook heb ik voor de tweede pagina heel veel genest in css, zelf vond ik dit een hele fijne manier van werken omdat je geen classes mocht gebruiken, ik heb alles mooi genest per sectie en persoonlijk vond ik dat heel overzichtelijk werken
+
+```css
+ main>section:nth-of-type(6) {
+        padding-bottom: 3em;
+        display: flex;
+        flex-direction: column;
+
+        & h4 {
+            align-self: center;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        & p {
+            align-self: center;
+            text-align: center;
+            width: 90%;
+            padding-bottom: 2em;
+        }
+    }
+
+```
+
+
+De rest van de pagina vond ik niet heel lastig en heb ik zonder problemen kunnen maken
 
   ### Agenda voor meeting
   samen met je groepje opstellen
