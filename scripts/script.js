@@ -4,24 +4,24 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Select all <li> elements
-    const cards = document.getElementsByTagName('li');
+  // Select all <li> elements
+  const cards = document.getElementsByTagName('li');
 
-    for (let i = 0; i < cards.length; i++) {
-        const card = cards[i];
-        const checkbox = card.getElementsByTagName('input')[0]; // first input inside li
-        const duration = parseInt(card.getAttribute('data-duration'), 10); // in ms
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const checkbox = card.getElementsByTagName('input')[0]; // first input inside li
+    const duration = parseInt(card.getAttribute('data-duration'), 10); // in ms
 
-        if (!checkbox) continue; // skip if no input found
+    if (!checkbox) continue; // skip if no input found
 
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked) {
-                setTimeout(() => {
-                    checkbox.checked = false;
-                }, duration);
-            }
-        });
-    }
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        setTimeout(() => {
+          checkbox.checked = false;
+        }, duration);
+      }
+    });
+  }
 });
 
 
@@ -38,7 +38,7 @@ var deButton = document.querySelector("header button");
 deButton.onclick = toggleMenu;
 
 // stap 3: voeg in de functie een claas toe aan de nav
-function toggleMenu() {  
+function toggleMenu() {
   // zoek de nav op
   var deNav = document.querySelector("nav");
   // voeg een class toe aan de nav
@@ -57,19 +57,19 @@ button.addEventListener('click', () => {
     // Menu open → kruis
     lines[0].style.transform = 'rotate(45deg)';
     lines[1].style.transform = 'rotate(-45deg)';
-    
+
     // gap verdwijnt
     button.style.gap = '0';
-    
+
     menuOpen = true;
   } else {
     // Menu dicht → hamburger
     lines[0].style.transform = 'rotate(0deg)';
     lines[1].style.transform = 'rotate(0deg)';
-    
+
     // gap terug
     button.style.gap = '0.6em';
-    
+
     menuOpen = false;
   }
 });
@@ -98,6 +98,12 @@ setInterval(() => {
 }, 2500); // elke 2.5 sec
 
 
+
+
+/***********************************/
+/* ----- LETTERTYPE SLIDER ---- */
+/*********************************/
+
 // slider: eerste range
 const slider = document.querySelector('input[type="range"]');
 
@@ -111,7 +117,7 @@ const links = document.querySelectorAll('a');
 const lis = document.querySelectorAll('li');
 
 // functie om font_size toe te passen
-function apply(){
+function apply() {
   const size = slider.value + 'px';
   ps.forEach(el => el.style.fontSize = size);
   links.forEach(el => el.style.fontSize = size);
@@ -126,14 +132,20 @@ slider.addEventListener('input', apply);
 
 
 
+
+
+/***********************************/
+/* ----- DASHBOARD BUTTON ---- */
+/*********************************/
+
 // Selecteer het laatste button in de nav (de D-button)
 const navList = document.querySelector("nav ul");
 const popButton = navList.querySelector("button:last-of-type");
 
 // Functie om toggle te doen
 function togglePopout() {
-    const isActive = popButton.getAttribute("data-active") === "true";
-    popButton.setAttribute("data-active", !isActive);
+  const isActive = popButton.getAttribute("data-active") === "true";
+  popButton.setAttribute("data-active", !isActive);
 }
 
 // Klik-event
@@ -141,8 +153,8 @@ popButton.addEventListener("click", togglePopout);
 
 // Keydown-event voor 'd'
 document.addEventListener("keydown", (e) => {
-    // Check of de ingedrukte toets 'd' of 'D' is
-    if (e.key === "d" || e.key === "D") {
-        togglePopout();
-    }
+  // Check of de ingedrukte toets 'd' of 'D' is
+  if (e.key === "d" || e.key === "D") {
+    togglePopout();
+  }
 });

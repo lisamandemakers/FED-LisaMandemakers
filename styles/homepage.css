@@ -21,8 +21,8 @@ main>section:first-of-type div {
   gap: 0.5em;
   margin-top: 0.5em;
   animation: fadeUp .8s ease-out forwards;
-    animation-delay: .3s;
-      opacity: 0;
+  animation-delay: .3s;
+  opacity: 0;
 }
 
 
@@ -51,9 +51,9 @@ main>section:first-of-type a:nth-of-type(2) {
 main>section:first-of-type img {
   margin-top: 2em;
   width: 100vw;
-    animation: fadeUp .8s ease-out forwards;
-    animation-delay: .45s;
-      opacity: 0;
+  animation: fadeUp .8s ease-out forwards;
+  animation-delay: .45s;
+  opacity: 0;
 }
 
 main>section:first-of-type p {
@@ -62,9 +62,9 @@ main>section:first-of-type p {
   text-align: center;
   line-height: 1.5em;
   font-size: 1em;
-    animation: fadeUp .8s ease-out forwards;
-    animation-delay: .15s;
-      opacity: 0;
+  animation: fadeUp .8s ease-out forwards;
+  animation-delay: .15s;
+  opacity: 0;
 }
 
 h1 {
@@ -74,11 +74,11 @@ h1 {
 
 
 @media (prefers-color-scheme: light) {
- main>section:first-of-type {
- background-color: var(--black);
- background-image: none;
-}
+  main>section:first-of-type {
+    background-color: var(--black);
+    background-image: none;
   }
+}
 
 
 
@@ -129,7 +129,7 @@ main>section:nth-of-type(2) ul {
 }
 
 main>section:nth-of-type(2) ul li {
-   display: flex;
+  display: flex;
   list-style: none;
   align-items: center;
   justify-content: center;
@@ -458,7 +458,7 @@ main>section:nth-of-type(4) a:nth-of-type(3) {
   gap: 0.2rem;
   text-decoration: none;
   font-size: 0.5em;
- color: var(--always-white-color);
+  color: var(--always-white-color);
   align-self: end;
   justify-self: center;
 
@@ -754,7 +754,7 @@ main>section:nth-of-type(6) ul:nth-of-type(2) {
   flex-wrap: wrap;
   margin-top: 0.em;
   overflow: hidden;
-  
+
 }
 
 
@@ -787,7 +787,7 @@ main>section:nth-of-type(6) ul:nth-of-type(2) li a:first-of-type img {
 
 
 main>section:nth-of-type(6) ul:nth-of-type(2) li a:nth-of-type(2) {
-  color:var(--white);
+  color: var(--white);
   height: 0.9em;
   align-self: end;
 
@@ -796,7 +796,7 @@ main>section:nth-of-type(6) ul:nth-of-type(2) li a:nth-of-type(2) {
   grid-column-start: 2;
   grid-column-end: 3;
 
-   width: 100%;
+  width: 100%;
 }
 
 main>section:nth-of-type(6) ul:nth-of-type(2) li p {

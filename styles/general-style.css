@@ -295,7 +295,7 @@ body header nav ul li a {
   font-family: "Inter-Variabele";
   font-weight: 100;
   font-size: 1em;
-  
+
 }
 
 body header nav ul li:nth-of-type(8) {
@@ -304,8 +304,8 @@ body header nav ul li:nth-of-type(8) {
   margin-bottom: 2em;
 }
 
-body header nav ul li:nth-of-type(8) a { 
-  color:var(--white);
+body header nav ul li:nth-of-type(8) a {
+  color: var(--white);
   font-weight: 700;
 
 }
@@ -325,29 +325,30 @@ body header nav ul li>button {
   color: var(--always-white-color);
   border: 1px solid var(--border-color);
   position: relative;
-     cursor: pointer;
+  cursor: pointer;
 }
 
 body header nav ul li>button::after {
-    content: "Projects";
-    position: absolute;
-    right: 1em;
-    top: 100%; 
-    margin-top: 0.4em;
-    padding: 1em 2em;
-    background-color: var(--border-color);
-    white-space: nowrap;
-    border-radius: 0.6em;
-    color: var(--white);
-    opacity: 0;
-    transform: translateY(-0.8em);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none; /* zodat het niet klikbaar is */
+  content: "Projects";
+  position: absolute;
+  right: 1em;
+  top: 100%;
+  margin-top: 0.4em;
+  padding: 1em 2em;
+  background-color: var(--border-color);
+  white-space: nowrap;
+  border-radius: 0.6em;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(-0.8em);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  /* zodat het niet klikbaar is */
 }
 
 button[data-active="true"]::after {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -456,7 +457,7 @@ footer ul li {
 
 footer ul li svg {
   height: 1.3em;
-  
+
 }
 
 footer ul li svg path {
